@@ -69,7 +69,20 @@ export function parseJsonAnswer<T>(
 }
 
 export function parsePendingReview(result: Record<string, unknown> | undefined): PendingCase | null {
-	return parseJsonAnswer<PendingCase>(result, 'pending_review', (o) => 'queue_status' in o && 'vendor' in o);
+	const predicate = (o: Record<string, unknown>) => 'queue_status' in o && 'vendor' in o;
+	const fast = parseJsonAnswer<PendingCase>(result, 'pending_review', predicate);
+	if (fast) return fast;
+	// Fallback: on the Gemini build the agent sometimes wraps the final case
+	// object in prose ("Here is the assessed case: {…}"). Dig the JSON object
+	// out of each answer string — same treatment parseVerification already gets.
+	const raw = result?.pending_review;
+	const arr = Array.isArray(raw) ? raw : [raw];
+	for (const item of [...arr].reverse()) {
+		if (typeof item !== 'string') continue;
+		const dug = extractEmbeddedJson(item, predicate);
+		if (dug) return dug as unknown as PendingCase;
+	}
+	return null;
 }
 
 /** Scan a string for balanced `{...}` blocks and return the first one that
