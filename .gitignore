@@ -28,4 +28,8 @@ api-key.txt
 # stray key / credential / scratch text files
 *[Kk]ey*.txt
 *[Uu]rl*.txt
+*[Aa]pi*.txt
 *.key
+
+.vercel
+.env*

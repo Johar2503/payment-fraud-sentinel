@@ -14,11 +14,10 @@ about any case. Built on RocketRide (idea #4, AP Payment Fraud Sentinel).
 **Public demo: https://payment-fraud-sentinel.netlify.app**
 
 Open it, go to **Submit**, drop a file from `test-data/invoices/` (e.g.
-`clean_01.txt` clears, `fraud_hold_01.txt` auto-holds). Runs on a rate-limited
-Google Gemini free-tier key — no account, no cost. If it pauses, the daily free
-quota is spent; try again later.
+`clean_01.txt` clears, `fraud_hold_01.txt` auto-holds). No account needed. The
+demo key has a hard spend cap; if runs start failing the cap was reached.
 
-Also deployed as a RocketRide App Builder app (runs on Anthropic, access-gated):
+Also deployed as a RocketRide App Builder app (access-gated):
 `https://staging.rocketride.ai/?appid=payment_fraud_sentinel.paymentFraudSentinel`
 
 ---

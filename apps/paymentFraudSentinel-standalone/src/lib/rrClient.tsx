@@ -18,9 +18,14 @@ import { RocketRideClient } from 'rocketride';
 
 const URI = import.meta.env.VITE_ROCKETRIDE_URI ?? '';
 const APIKEY = import.meta.env.VITE_ROCKETRIDE_APIKEY ?? '';
+// The v2 pipeline's LLM nodes run on Anthropic (llm_anthropic / claude-sonnet-4-6) —
+// the server resolves ${ROCKETRIDE_ANTHROPIC_KEY} from this. The public demo bundles
+// a key with a hard spend cap set on the Anthropic console; rotate it after judging.
+// Free-tier alternatives (Gemini / Groq) were tried but their per-minute token
+// limits are too tight for the multi-wave agent; GROQ_KEY / GEMINI_KEY stay wired
+// as inert fallbacks and are unset in the deployed build.
 const ANTHROPIC_KEY = import.meta.env.VITE_ROCKETRIDE_ANTHROPIC_KEY ?? '';
-// The v2 pipeline's LLM nodes run on Gemini (llm_gemini, Google AI Studio free tier)
-// for the public demo build; the server resolves ${ROCKETRIDE_GEMINI_KEY} from this.
+const GROQ_KEY = import.meta.env.VITE_ROCKETRIDE_GROQ_KEY ?? '';
 const GEMINI_KEY = import.meta.env.VITE_ROCKETRIDE_GEMINI_KEY ?? '';
 // Signed-in account user id. The managed rocketride_sql nodes (vendor lookup in the
 // invoice flow, risk_history writeback in the decision flow) need it to resolve the
@@ -35,6 +40,7 @@ const ENV: Record<string, string> = {
 	ROCKETRIDE_URI: URI,
 	ROCKETRIDE_APIKEY: APIKEY,
 	...(ANTHROPIC_KEY ? { ROCKETRIDE_ANTHROPIC_KEY: ANTHROPIC_KEY } : {}),
+	...(GROQ_KEY ? { ROCKETRIDE_GROQ_KEY: GROQ_KEY } : {}),
 	...(GEMINI_KEY ? { ROCKETRIDE_GEMINI_KEY: GEMINI_KEY } : {}),
 	...(CLIENT_ID ? { ROCKETRIDE_CLIENT_ID: CLIENT_ID } : {}),
 };
