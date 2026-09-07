@@ -1,0 +1,45 @@
+{
+  "name": "payment_fraud_sentinel-paymentfraudsentinel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Payment Fraud Sentinel — a RocketRide app",
+  "license": "MIT",
+  "appManifest": {
+    "id": "payment_fraud_sentinel.paymentFraudSentinel",
+    "publisher": "payment_fraud_sentinel",
+    "name": "Payment Fraud Sentinel",
+    "description": "AP invoice fraud triage and human approval queue for mid-size finance teams.",
+    "icon": "./icon.svg",
+    "readme": "./README.md",
+    "categories": [
+      "tools"
+    ],
+    "mode": "free",
+    "authenticated": true,
+    "include": [
+      "pipelines/payment_fraud_sentinel_v2.pipe"
+    ],
+    "projectId": "76c74c46-d50d-4dbe-914e-bf17b43bb0e6"
+  },
+  "scripts": {
+    "dev": "rsbuild dev",
+    "build": "tsc --noEmit && rsbuild build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rocketride": "file:../../.rocketride/client/rocketride.tgz",
+    "shell": "file:../../.rocketride/shell/shell.tgz"
+  },
+  "devDependencies": {
+    "@module-federation/rsbuild-plugin": "2.5.1",
+    "@rsbuild/core": "~2.0.11",
+    "@rsbuild/plugin-react": "~2.0.1",
+    "@types/node": "^20.19.41",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react-refresh": "^0.14.2",
+    "typescript": "^5.3.0"
+  }
+}

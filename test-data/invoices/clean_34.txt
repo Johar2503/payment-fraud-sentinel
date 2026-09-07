@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: NPS-2026-4034
+Vendor Name: Nod Publishers Systems Inc
+Remit-To Bank Account: ACH-****6339
+Purchase Order Number: PO-39787
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Bulk raw material supply — grade A pellets, 12 pallets
+Subtotal:            27,107.97 USD
+Sales Tax (7.0%):     1,897.56 USD
+Total Amount Due:    29,005.53 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: FMC-2026-4042
+Vendor Name: Fincher Manufacturing Corp
+Remit-To Bank Account: WIRE-****5193
+Purchase Order Number: PO-49732
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: Quarterly managed analytics platform subscription and standard support
+Subtotal:            23,216.76 USD
+Sales Tax (8.0%):     1,857.34 USD
+Total Amount Due:    25,074.10 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

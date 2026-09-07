@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: LLG-2026-4012
+Vendor Name: Lucerne Logistics GmbH
+Remit-To Bank Account: ACH-****3346
+Purchase Order Number: PO-96303
+Invoice Date: 2026-08-10
+Due Date: 2026-09-09
+
+Line Item: Freight and customs handling, August shipments
+Subtotal:            1,525.27 USD
+Sales Tax (7.0%):     106.77 USD
+Total Amount Due:    1,632.04 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

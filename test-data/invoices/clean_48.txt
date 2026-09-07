@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: FMC-2026-4048
+Vendor Name: Fincher Manufacturing Corp
+Remit-To Bank Account: WIRE-****5193
+Purchase Order Number: PO-70529
+Invoice Date: 2026-08-23
+Due Date: 2026-09-22
+
+Line Item: Freight and customs handling, August shipments
+Subtotal:            26,718.38 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    26,718.38 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

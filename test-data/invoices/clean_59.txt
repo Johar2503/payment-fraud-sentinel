@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: PSL-2026-4059
+Vendor Name: Parnell Supplies Ltd
+Remit-To Bank Account: IBAN-DE**21****4229
+Purchase Order Number: PO-73376
+Invoice Date: 2026-08-13
+Due Date: 2026-09-12
+
+Line Item: Replacement components and expedited assembly labor
+Subtotal:            1,192.56 USD
+Sales Tax (7.0%):     83.48 USD
+Total Amount Due:    1,276.04 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

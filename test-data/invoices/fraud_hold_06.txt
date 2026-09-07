@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: NIL-2026-4071
+Vendor Name: Northwind Industries LLC
+Remit-To Bank Account: ACH-****7250
+Purchase Order Number: (not provided)
+Invoice Date: 2026-08-24
+Due Date: 2026-08-25
+
+Line Item: Emergency bulk procurement — expedited same-week delivery
+Subtotal:            44,899.76 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    44,899.76 USD
+Currency: USD
+
+URGENT: vendor requests same-day wire to the account listed above. Prior banking details on file are no longer valid — please update the remittance account immediately.

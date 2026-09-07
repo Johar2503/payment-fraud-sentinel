@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TCG-2026-4035
+Vendor Name: Tailspin Consulting Group
+Remit-To Bank Account: ACH-****3354
+Purchase Order Number: PO-36006
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Software license true-up, additional seats
+Subtotal:            28,887.99 USD
+Sales Tax (7.5%):     2,166.60 USD
+Total Amount Due:    31,054.59 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

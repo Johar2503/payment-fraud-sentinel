@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: PCG-2026-4014
+Vendor Name: Proseware Consulting GmbH
+Remit-To Bank Account: ACH-****4718
+Purchase Order Number: PO-59516
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Managed security monitoring — monthly retainer
+Subtotal:            5,461.17 USD
+Sales Tax (8.0%):     436.89 USD
+Total Amount Due:    5,898.06 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

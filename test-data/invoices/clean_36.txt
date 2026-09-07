@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: LSG-2026-4036
+Vendor Name: Litware Solutions Group
+Remit-To Bank Account: ACH-****2766
+Purchase Order Number: PO-96948
+Invoice Date: 2026-08-18
+Due Date: 2026-09-17
+
+Line Item: Managed security monitoring — monthly retainer
+Subtotal:            32,149.45 USD
+Sales Tax (7.5%):     2,411.21 USD
+Total Amount Due:    34,560.66 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

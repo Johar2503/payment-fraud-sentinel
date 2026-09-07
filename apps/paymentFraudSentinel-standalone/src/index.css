@@ -1,0 +1,73 @@
+@import './styles/motion.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		color-scheme: dark;
+	}
+
+	html,
+	body,
+	#root {
+		height: 100%;
+	}
+
+	body {
+		margin: 0;
+		background: theme('colors.ground');
+		color: theme('colors.ink');
+		font-family: theme('fontFamily.sans');
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	/* Neutral, high-contrast focus ring. Not amber (reserved for risk) and not
+	   violet (reserved for AI content) — a plain light ring reads as a system
+	   affordance. */
+	:where(a, button, input, textarea, select, [tabindex], [role='button']):focus-visible {
+		outline: 2px solid theme('colors.ink');
+		outline-offset: 2px;
+		border-radius: 6px;
+	}
+
+	::selection {
+		background: rgba(139, 92, 246, 0.32);
+	}
+
+	/* Catch-all: neutralise any animation/transition (incl. Tailwind utilities
+	   like animate-pulse) for viewers who ask for reduced motion. */
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.001ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.001ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	/* Slim, unobtrusive scrollbars for the code / transcript panels. */
+	.pfs-scroll {
+		scrollbar-width: thin;
+		scrollbar-color: theme('colors.line') transparent;
+	}
+	.pfs-scroll::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
+	.pfs-scroll::-webkit-scrollbar-thumb {
+		background: theme('colors.line');
+		border-radius: 6px;
+	}
+}
+
+@layer utilities {
+	.tabular {
+		font-variant-numeric: tabular-nums;
+	}
+}

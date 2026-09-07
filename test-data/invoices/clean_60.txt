@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TTI-2026-4060
+Vendor Name: Trey Traders Inc
+Remit-To Bank Account: ACH-****1498
+Purchase Order Number: PO-44204
+Invoice Date: 2026-08-13
+Due Date: 2026-09-12
+
+Line Item: Annual maintenance contract renewal, tier 2
+Subtotal:            6,020.22 USD
+Sales Tax (7.0%):     421.42 USD
+Total Amount Due:    6,441.64 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

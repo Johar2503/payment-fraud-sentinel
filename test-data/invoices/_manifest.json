@@ -1,0 +1,902 @@
+[
+  {
+    "file": "clean_01.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0015",
+    "vendor_name": "Adventure Works Services Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_02.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0018",
+    "vendor_name": "Wide World Solutions Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_03.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0002",
+    "vendor_name": "Graphic Design Institute Holdings Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_04.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0023",
+    "vendor_name": "Tailspin Systems Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_05.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0007",
+    "vendor_name": "Trey Industries Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_06.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0007",
+    "vendor_name": "Trey Industries Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_07.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0017",
+    "vendor_name": "Tailspin Distribution Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_08.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0017",
+    "vendor_name": "Tailspin Distribution Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_09.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0046",
+    "vendor_name": "VanArsdel Solutions Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_10.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0032",
+    "vendor_name": "Northwind Solutions LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_11.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0049",
+    "vendor_name": "Wide World Traders Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_12.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0009",
+    "vendor_name": "Lucerne Logistics GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_13.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0024",
+    "vendor_name": "Humongous Distribution Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_14.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0033",
+    "vendor_name": "Proseware Consulting GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_15.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0035",
+    "vendor_name": "Relecloud Systems Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_16.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0016",
+    "vendor_name": "Coho Logistics Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_17.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0043",
+    "vendor_name": "Trey Traders Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_18.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0005",
+    "vendor_name": "Tru-Fit Holdings Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_19.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0036",
+    "vendor_name": "Proseware Traders Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_20.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0045",
+    "vendor_name": "Tru-Fit Supplies LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_21.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0036",
+    "vendor_name": "Proseware Traders Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_22.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0005",
+    "vendor_name": "Tru-Fit Holdings Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_23.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0044",
+    "vendor_name": "Litware Solutions Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_24.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0049",
+    "vendor_name": "Wide World Traders Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_25.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0018",
+    "vendor_name": "Wide World Solutions Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_26.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0039",
+    "vendor_name": "Nod Publishers Solutions Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_27.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0006",
+    "vendor_name": "Wingtip Distribution GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_28.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0043",
+    "vendor_name": "Trey Traders Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_29.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0011",
+    "vendor_name": "Litware Distribution Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_30.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0047",
+    "vendor_name": "Tailspin Consulting Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_31.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0004",
+    "vendor_name": "Parnell Supplies Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_32.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0015",
+    "vendor_name": "Adventure Works Services Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_33.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0029",
+    "vendor_name": "Northwind Solutions Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_34.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0021",
+    "vendor_name": "Nod Publishers Systems Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_35.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0047",
+    "vendor_name": "Tailspin Consulting Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_36.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0044",
+    "vendor_name": "Litware Solutions Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_37.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0040",
+    "vendor_name": "Southridge Solutions LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_38.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0045",
+    "vendor_name": "Tru-Fit Supplies LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_39.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0045",
+    "vendor_name": "Tru-Fit Supplies LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_40.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0049",
+    "vendor_name": "Wide World Traders Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_41.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0011",
+    "vendor_name": "Litware Distribution Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_42.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0013",
+    "vendor_name": "Fincher Manufacturing Corp",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_43.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0006",
+    "vendor_name": "Wingtip Distribution GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_44.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0002",
+    "vendor_name": "Graphic Design Institute Holdings Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_45.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0012",
+    "vendor_name": "Fourth Coffee Systems Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_46.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0005",
+    "vendor_name": "Tru-Fit Holdings Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_47.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0044",
+    "vendor_name": "Litware Solutions Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_48.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0013",
+    "vendor_name": "Fincher Manufacturing Corp",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_49.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0020",
+    "vendor_name": "Tailspin Systems Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_50.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0037",
+    "vendor_name": "Margies Industries LLC",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_51.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0016",
+    "vendor_name": "Coho Logistics Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_52.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0024",
+    "vendor_name": "Humongous Distribution Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_53.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0044",
+    "vendor_name": "Litware Solutions Group",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_54.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0031",
+    "vendor_name": "Graphic Design Institute Traders Co",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_55.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0020",
+    "vendor_name": "Tailspin Systems Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_56.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0033",
+    "vendor_name": "Proseware Consulting GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_57.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0011",
+    "vendor_name": "Litware Distribution Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_58.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0003",
+    "vendor_name": "Blue Yonder Systems Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_59.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0004",
+    "vendor_name": "Parnell Supplies Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_60.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0043",
+    "vendor_name": "Trey Traders Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_61.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0050",
+    "vendor_name": "Woodgrove Partners GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_62.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0011",
+    "vendor_name": "Litware Distribution Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_63.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0015",
+    "vendor_name": "Adventure Works Services Ltd",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_64.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0033",
+    "vendor_name": "Proseware Consulting GmbH",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "clean_65.txt",
+    "category": "clean",
+    "expected_queue": "auto_cleared",
+    "expects_hold": false,
+    "vendor_id": "V0028",
+    "vendor_name": "Wide World Industries Inc",
+    "notes": "established vendor, on-file bank, amount within 0.6-1.4x mean"
+  },
+  {
+    "file": "fraud_hold_01.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0008",
+    "vendor_name": "Tru-Fit Solutions Co",
+    "notes": "new vendor (22d), off-file bank, ~4.7x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_02.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0019",
+    "vendor_name": "Nod Publishers Consulting Group",
+    "notes": "new vendor (10d), off-file bank, ~4.4x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_03.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0030",
+    "vendor_name": "Relecloud Services LLC",
+    "notes": "new vendor (25d), off-file bank, ~3.8x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_04.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0034",
+    "vendor_name": "City Power Consulting Ltd",
+    "notes": "new vendor (28d), off-file bank, ~4.3x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_05.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0042",
+    "vendor_name": "Wide World Solutions Co",
+    "notes": "new vendor (23d), off-file bank, ~4.3x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_06.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0048",
+    "vendor_name": "Northwind Industries LLC",
+    "notes": "new vendor (11d), off-file bank, ~2.9x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_07.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0008",
+    "vendor_name": "Tru-Fit Solutions Co",
+    "notes": "new vendor (22d), off-file bank, ~2.9x mean, urgency"
+  },
+  {
+    "file": "fraud_hold_08.txt",
+    "category": "fraud_full_hold",
+    "expected_queue": "auto_hold",
+    "expects_hold": true,
+    "vendor_id": "V0019",
+    "vendor_name": "Nod Publishers Consulting Group",
+    "notes": "new vendor (10d), off-file bank, ~4.5x mean, urgency"
+  },
+  {
+    "file": "susp_bankchg_01.txt",
+    "category": "suspicious_bank_change",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0004",
+    "vendor_name": "Parnell Supplies Ltd",
+    "notes": "established vendor, OFF-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_bankchg_02.txt",
+    "category": "suspicious_bank_change",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0012",
+    "vendor_name": "Fourth Coffee Systems Ltd",
+    "notes": "established vendor, OFF-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_bankchg_03.txt",
+    "category": "suspicious_bank_change",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0020",
+    "vendor_name": "Tailspin Systems Ltd",
+    "notes": "established vendor, OFF-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_bankchg_04.txt",
+    "category": "suspicious_bank_change",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0027",
+    "vendor_name": "Tru-Fit Solutions Ltd",
+    "notes": "established vendor, OFF-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_bankchg_05.txt",
+    "category": "suspicious_bank_change",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0036",
+    "vendor_name": "Proseware Traders Co",
+    "notes": "established vendor, OFF-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_amount_01.txt",
+    "category": "suspicious_amount_outlier",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0013",
+    "vendor_name": "Fincher Manufacturing Corp",
+    "notes": "established vendor, on-file bank, ~5.9x mean — single signal"
+  },
+  {
+    "file": "susp_amount_02.txt",
+    "category": "suspicious_amount_outlier",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0018",
+    "vendor_name": "Wide World Solutions Co",
+    "notes": "established vendor, on-file bank, ~4.7x mean — single signal"
+  },
+  {
+    "file": "susp_amount_03.txt",
+    "category": "suspicious_amount_outlier",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0024",
+    "vendor_name": "Humongous Distribution Ltd",
+    "notes": "established vendor, on-file bank, ~5.0x mean — single signal"
+  },
+  {
+    "file": "susp_amount_04.txt",
+    "category": "suspicious_amount_outlier",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0029",
+    "vendor_name": "Northwind Solutions Ltd",
+    "notes": "established vendor, on-file bank, ~3.3x mean — single signal"
+  },
+  {
+    "file": "susp_amount_05.txt",
+    "category": "suspicious_amount_outlier",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0036",
+    "vendor_name": "Proseware Traders Co",
+    "notes": "established vendor, on-file bank, ~4.9x mean — single signal"
+  },
+  {
+    "file": "susp_newvendor_01.txt",
+    "category": "suspicious_new_vendor",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0030",
+    "vendor_name": "Relecloud Services LLC",
+    "notes": "new vendor (25d), on-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_newvendor_02.txt",
+    "category": "suspicious_new_vendor",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0034",
+    "vendor_name": "City Power Consulting Ltd",
+    "notes": "new vendor (28d), on-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_newvendor_03.txt",
+    "category": "suspicious_new_vendor",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0042",
+    "vendor_name": "Wide World Solutions Co",
+    "notes": "new vendor (23d), on-file bank, normal amount — single signal"
+  },
+  {
+    "file": "susp_newvendor_04.txt",
+    "category": "suspicious_new_vendor",
+    "expected_queue": "pending_review",
+    "expects_hold": false,
+    "vendor_id": "V0048",
+    "vendor_name": "Northwind Industries LLC",
+    "notes": "new vendor (11d), on-file bank, normal amount — single signal"
+  },
+  {
+    "file": "malformed_01_empty.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "zero-byte file"
+  },
+  {
+    "file": "malformed_02_whitespace.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "whitespace and newlines only"
+  },
+  {
+    "file": "malformed_03_memo.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "internal memo, not an invoice"
+  },
+  {
+    "file": "malformed_04_recipe.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "unrelated prose (recipe)"
+  },
+  {
+    "file": "malformed_05_no_amount.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "invoice shape but no amount anywhere"
+  },
+  {
+    "file": "malformed_06_no_vendor.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "invoice shape but vendor name missing"
+  },
+  {
+    "file": "malformed_07_garbled_ocr.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "garbled OCR, no field labels"
+  },
+  {
+    "file": "malformed_08_smashed.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "all fields concatenated, no newlines"
+  },
+  {
+    "file": "malformed_09_absurd_amount.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "absurd / overflow amount"
+  },
+  {
+    "file": "malformed_10_negative.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "negative total / credit note posted as invoice"
+  },
+  {
+    "file": "malformed_11_conflicting_totals.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "three different totals, no reconciliation"
+  },
+  {
+    "file": "malformed_12_json_blob.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "raw JSON blob instead of invoice text"
+  },
+  {
+    "file": "malformed_13_truncated.txt",
+    "category": "malformed",
+    "expected_queue": "error_or_degraded",
+    "expects_hold": false,
+    "vendor_id": null,
+    "vendor_name": null,
+    "notes": "file truncated mid-field"
+  }
+]

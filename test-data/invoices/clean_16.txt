@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: CLI-2026-4016
+Vendor Name: Coho Logistics Inc
+Remit-To Bank Account: WIRE-****4834
+Purchase Order Number: PO-28672
+Invoice Date: 2026-08-15
+Due Date: 2026-09-14
+
+Line Item: Bulk raw material supply — grade A pellets, 12 pallets
+Subtotal:            49,356.61 USD
+Sales Tax (7.0%):     3,454.96 USD
+Total Amount Due:    52,811.58 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

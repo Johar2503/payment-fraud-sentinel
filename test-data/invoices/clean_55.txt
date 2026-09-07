@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: TSL-2026-4055
+Vendor Name: Tailspin Systems Ltd
+Remit-To Bank Account: WIRE-****1976
+Purchase Order Number: PO-55410
+Invoice Date: 2026-08-09
+Due Date: 2026-09-08
+
+Line Item: Annual maintenance contract renewal, tier 2
+Subtotal:            38,160.97 USD
+Sales Tax (8.5%):     3,243.68 USD
+Total Amount Due:    41,404.65 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

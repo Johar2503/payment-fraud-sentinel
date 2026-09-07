@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: HDL-2026-4081
+Vendor Name: Humongous Distribution Ltd
+Remit-To Bank Account: ACH-****9973
+Purchase Order Number: PO-68971
+Invoice Date: 2026-08-21
+Due Date: 2026-09-20
+
+Line Item: One-time capital purchase — production line tooling
+Subtotal:            124,725.75 USD
+Sales Tax (8.0%):     9,978.06 USD
+Total Amount Due:    134,703.81 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

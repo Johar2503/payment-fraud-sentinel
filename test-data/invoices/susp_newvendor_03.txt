@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWS-2026-4086
+Vendor Name: Wide World Solutions Co
+Remit-To Bank Account: ACH-****1237
+Purchase Order Number: PO-24681
+Invoice Date: 2026-08-25
+Due Date: 2026-09-24
+
+Line Item: Marketing campaign production and media placement
+Subtotal:            36,065.60 USD
+Sales Tax (7.5%):     2,704.92 USD
+Total Amount Due:    38,770.52 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

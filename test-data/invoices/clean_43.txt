@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: WDG-2026-4043
+Vendor Name: Wingtip Distribution GmbH
+Remit-To Bank Account: ACH-****1017
+Purchase Order Number: PO-56001
+Invoice Date: 2026-08-18
+Due Date: 2026-09-17
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            10,525.65 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    10,525.65 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

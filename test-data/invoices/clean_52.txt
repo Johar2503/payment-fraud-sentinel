@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: HDL-2026-4052
+Vendor Name: Humongous Distribution Ltd
+Remit-To Bank Account: ACH-****3683
+Purchase Order Number: PO-61991
+Invoice Date: 2026-08-20
+Due Date: 2026-09-19
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            18,634.20 USD
+Sales Tax (7.0%):     1,304.39 USD
+Total Amount Due:    19,938.60 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

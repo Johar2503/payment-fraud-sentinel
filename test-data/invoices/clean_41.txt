@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: LDI-2026-4041
+Vendor Name: Litware Distribution Inc
+Remit-To Bank Account: WIRE-****3337
+Purchase Order Number: PO-99626
+Invoice Date: 2026-08-21
+Due Date: 2026-09-20
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            2,028.09 USD
+Sales Tax (8.5%):     172.39 USD
+Total Amount Due:    2,200.48 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

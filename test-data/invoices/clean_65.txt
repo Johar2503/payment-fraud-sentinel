@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWI-2026-4065
+Vendor Name: Wide World Industries Inc
+Remit-To Bank Account: IBAN-DE**43****1764
+Purchase Order Number: PO-72039
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: Packaging materials and print run, SKU refresh
+Subtotal:            16,733.47 USD
+Sales Tax (7.5%):     1,255.01 USD
+Total Amount Due:    17,988.48 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

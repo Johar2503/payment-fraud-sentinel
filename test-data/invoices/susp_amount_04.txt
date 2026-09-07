@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: NSL-2026-4082
+Vendor Name: Northwind Solutions Ltd
+Remit-To Bank Account: WIRE-****5865
+Purchase Order Number: PO-75210
+Invoice Date: 2026-08-17
+Due Date: 2026-09-16
+
+Line Item: One-time capital purchase — production line tooling
+Subtotal:            30,902.96 USD
+Sales Tax (8.0%):     2,472.24 USD
+Total Amount Due:    33,375.20 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

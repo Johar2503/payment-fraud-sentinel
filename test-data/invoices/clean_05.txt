@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TIC-2026-4005
+Vendor Name: Trey Industries Co
+Remit-To Bank Account: WIRE-****4823
+Purchase Order Number: PO-77481
+Invoice Date: 2026-08-21
+Due Date: 2026-09-20
+
+Line Item: Managed security monitoring — monthly retainer
+Subtotal:            42,059.39 USD
+Sales Tax (8.0%):     3,364.75 USD
+Total Amount Due:    45,424.14 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

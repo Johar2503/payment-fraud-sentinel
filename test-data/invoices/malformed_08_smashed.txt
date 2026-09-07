@@ -1,0 +1,1 @@
+invoicenumberTP-2026-3312vendornameTailspin Traders LLCremittoACH-****2201poPO-33120invoicedate2026-08-15duedate2026-09-14lineitemfreightforwardingtotalamountdue27,900.00USDcurrencyUSDremitperfileonbanking

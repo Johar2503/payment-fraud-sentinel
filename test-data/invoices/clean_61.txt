@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WPG-2026-4061
+Vendor Name: Woodgrove Partners GmbH
+Remit-To Bank Account: ACH-****4580
+Purchase Order Number: PO-14009
+Invoice Date: 2026-08-17
+Due Date: 2026-09-16
+
+Line Item: Bulk raw material supply — grade A pellets, 12 pallets
+Subtotal:            13,319.66 USD
+Sales Tax (7.0%):     932.38 USD
+Total Amount Due:    14,252.04 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

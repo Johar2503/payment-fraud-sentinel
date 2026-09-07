@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: LSG-2026-4023
+Vendor Name: Litware Solutions Group
+Remit-To Bank Account: IBAN-DE**93****1685
+Purchase Order Number: PO-77495
+Invoice Date: 2026-08-23
+Due Date: 2026-09-22
+
+Line Item: Quarterly managed analytics platform subscription and standard support
+Subtotal:            26,849.11 USD
+Sales Tax (7.0%):     1,879.44 USD
+Total Amount Due:    28,728.55 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

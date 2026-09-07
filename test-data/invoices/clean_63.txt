@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: AWS-2026-4063
+Vendor Name: Adventure Works Services Ltd
+Remit-To Bank Account: ACH-****7990
+Purchase Order Number: PO-13907
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Bulk raw material supply — grade A pellets, 12 pallets
+Subtotal:            3,586.81 USD
+Sales Tax (7.5%):     269.01 USD
+Total Amount Due:    3,855.82 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

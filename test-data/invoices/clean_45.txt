@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: FCS-2026-4045
+Vendor Name: Fourth Coffee Systems Ltd
+Remit-To Bank Account: IBAN-DE**16****6041
+Purchase Order Number: PO-81360
+Invoice Date: 2026-08-08
+Due Date: 2026-09-07
+
+Line Item: Replacement components and expedited assembly labor
+Subtotal:            6,254.36 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    6,254.36 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

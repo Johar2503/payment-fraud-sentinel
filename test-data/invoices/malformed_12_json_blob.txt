@@ -1,0 +1,1 @@
+{"doc":"invoice","meta":{"id":null,"vendor":{"name":"","bank":""},"lines":[],"total":{"value":"NaN","ccy":"USD"}},"notes":"export failed — template fields not populated"}

@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TCG-2026-4030
+Vendor Name: Tailspin Consulting Group
+Remit-To Bank Account: ACH-****3354
+Purchase Order Number: PO-77214
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: Annual maintenance contract renewal, tier 2
+Subtotal:            36,393.04 USD
+Sales Tax (8.0%):     2,911.44 USD
+Total Amount Due:    39,304.48 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

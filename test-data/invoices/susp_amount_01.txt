@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: FMC-2026-4079
+Vendor Name: Fincher Manufacturing Corp
+Remit-To Bank Account: WIRE-****5193
+Purchase Order Number: PO-46448
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: One-time capital purchase — production line tooling
+Subtotal:            171,543.81 USD
+Sales Tax (8.0%):     13,723.50 USD
+Total Amount Due:    185,267.32 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

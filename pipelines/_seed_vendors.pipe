@@ -1,0 +1,48 @@
+{
+	"components": [
+		{
+			"id": "webhook_1",
+			"provider": "webhook",
+			"config": { "hideForm": true, "mode": "Source", "parameters": {}, "type": "webhook" },
+			"ui": { "position": { "x": 20, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "rocketride_sql_1",
+			"provider": "rocketride_sql",
+			"config": {
+				"profile": "default",
+				"default": {
+					"table": "vendors",
+					"db_description": "Vendor master for accounts-payable fraud screening. Table 'vendors' columns: vendor_id (text pk), name (text), known_bank_accounts (JSON array), historical_invoice_amounts (JSON array of numbers), first_seen_date (date), risk_score (integer 0-100), risk_history (JSON array of { date, event, decision, note }).",
+					"max_attempts": 5,
+					"allow_execute": true
+				},
+				"parameters": {}
+			},
+			"input": [{ "lane": "questions", "from": "webhook_1" }],
+			"ui": { "position": { "x": 240, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "llm_1",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": { "apikey": "${ROCKETRIDE_ANTHROPIC_KEY}", "extendedThinking": false },
+				"parameters": {}
+			},
+			"control": [{ "classType": "llm", "from": "rocketride_sql_1" }],
+			"ui": { "position": { "x": 240, "y": 380 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "response_answers_1",
+			"provider": "response_answers",
+			"config": { "laneName": "answers" },
+			"input": [{ "lane": "answers", "from": "rocketride_sql_1" }],
+			"ui": { "position": { "x": 460, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		}
+	],
+	"source": "webhook_1",
+	"project_id": "64e02347-23c5-4d49-9387-fdf57f67654a",
+	"viewport": { "x": 0, "y": 0, "zoom": 1 },
+	"version": 1
+}

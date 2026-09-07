@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: TDG-2026-4007
+Vendor Name: Tailspin Distribution Group
+Remit-To Bank Account: ACH-****7726
+Purchase Order Number: PO-48952
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: Packaging materials and print run, SKU refresh
+Subtotal:            18,303.51 USD
+Sales Tax (8.5%):     1,555.80 USD
+Total Amount Due:    19,859.31 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWT-2026-4040
+Vendor Name: Wide World Traders Ltd
+Remit-To Bank Account: IBAN-DE**53****8924
+Purchase Order Number: PO-74000
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: Quarterly managed analytics platform subscription and standard support
+Subtotal:            14,818.46 USD
+Sales Tax (8.0%):     1,185.48 USD
+Total Amount Due:    16,003.94 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

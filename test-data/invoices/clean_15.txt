@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: RSL-2026-4015
+Vendor Name: Relecloud Systems Ltd
+Remit-To Bank Account: ACH-****6785
+Purchase Order Number: PO-22488
+Invoice Date: 2026-08-14
+Due Date: 2026-09-13
+
+Line Item: Freight and customs handling, August shipments
+Subtotal:            1,783.35 USD
+Sales Tax (8.5%):     151.59 USD
+Total Amount Due:    1,934.94 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

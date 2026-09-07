@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TSI-2026-4004
+Vendor Name: Tailspin Systems Inc
+Remit-To Bank Account: IBAN-DE**74****5361
+Purchase Order Number: PO-96033
+Invoice Date: 2026-08-25
+Due Date: 2026-09-24
+
+Line Item: Freight and customs handling, August shipments
+Subtotal:            20,584.19 USD
+Sales Tax (7.0%):     1,440.89 USD
+Total Amount Due:    22,025.08 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

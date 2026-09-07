@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: NSL-2026-4033
+Vendor Name: Northwind Solutions Ltd
+Remit-To Bank Account: WIRE-****5865
+Purchase Order Number: PO-80663
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Managed security monitoring — monthly retainer
+Subtotal:            7,847.89 USD
+Sales Tax (7.5%):     588.59 USD
+Total Amount Due:    8,436.48 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

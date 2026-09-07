@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: THC-2026-4046
+Vendor Name: Tru-Fit Holdings Co
+Remit-To Bank Account: WIRE-****2587
+Purchase Order Number: PO-89724
+Invoice Date: 2026-08-09
+Due Date: 2026-09-08
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            17,932.85 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    17,932.85 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

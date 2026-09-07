@@ -1,0 +1,11 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: 2026-90042
+Remit-To Bank Account: WIRE-****8830
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Consulting services rendered
+Total Amount Due: 18,400.00 USD
+Currency: USD

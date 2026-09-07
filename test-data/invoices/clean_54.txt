@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: GDI-2026-4054
+Vendor Name: Graphic Design Institute Traders Co
+Remit-To Bank Account: IBAN-DE**21****7192
+Purchase Order Number: PO-11875
+Invoice Date: 2026-08-22
+Due Date: 2026-09-21
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            2,664.90 USD
+Sales Tax (7.0%):     186.54 USD
+Total Amount Due:    2,851.45 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

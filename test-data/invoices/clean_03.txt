@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: GDI-2026-4003
+Vendor Name: Graphic Design Institute Holdings Group
+Remit-To Bank Account: WIRE-****2053
+Purchase Order Number: PO-43039
+Invoice Date: 2026-08-15
+Due Date: 2026-09-14
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            25,409.47 USD
+Sales Tax (7.0%):     1,778.66 USD
+Total Amount Due:    27,188.13 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

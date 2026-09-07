@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: BYS-2026-4058
+Vendor Name: Blue Yonder Systems Inc
+Remit-To Bank Account: ACH-****7172
+Purchase Order Number: PO-89880
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: Software license true-up, additional seats
+Subtotal:            27,584.47 USD
+Sales Tax (8.0%):     2,206.76 USD
+Total Amount Due:    29,791.23 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

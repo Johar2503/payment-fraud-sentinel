@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: PSL-2026-4074
+Vendor Name: Parnell Supplies Ltd
+Remit-To Bank Account: ACH-****9010
+Purchase Order Number: PO-67303
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Replacement components and expedited assembly labor
+Subtotal:            2,308.33 USD
+Sales Tax (8.0%):     184.67 USD
+Total Amount Due:    2,492.99 USD
+Currency: USD
+
+NEW BANKING DETAILS: our previous account is being retired — please pay to the account above going forward.

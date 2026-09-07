@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: THC-2026-4018
+Vendor Name: Tru-Fit Holdings Co
+Remit-To Bank Account: WIRE-****2587
+Purchase Order Number: PO-39342
+Invoice Date: 2026-08-15
+Due Date: 2026-09-14
+
+Line Item: Packaging materials and print run, SKU refresh
+Subtotal:            26,131.22 USD
+Sales Tax (8.0%):     2,090.50 USD
+Total Amount Due:    28,221.72 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

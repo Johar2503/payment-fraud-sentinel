@@ -1,0 +1,14 @@
+GLOBEX PARTS CO — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: GPC-2026-7781
+Vendor Name: Globex Parts Co
+Remit-To Bank Account: ACH-****4419
+Purchase Order Number: PO-55123
+Invoice Date: 2026-08-18
+Due Date: 2026-09-17
+
+Line Item: Assorted fasteners and brackets, restock
+Currency: USD
+
+Amount to be confirmed under separate cover.

@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: PCG-2026-4056
+Vendor Name: Proseware Consulting GmbH
+Remit-To Bank Account: WIRE-****7384
+Purchase Order Number: PO-43884
+Invoice Date: 2026-08-08
+Due Date: 2026-09-07
+
+Line Item: Marketing campaign production and media placement
+Subtotal:            12,231.73 USD
+Sales Tax (7.5%):     917.38 USD
+Total Amount Due:    13,149.11 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

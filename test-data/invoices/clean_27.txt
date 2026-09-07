@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: WDG-2026-4027
+Vendor Name: Wingtip Distribution GmbH
+Remit-To Bank Account: ACH-****1017
+Purchase Order Number: PO-96215
+Invoice Date: 2026-08-10
+Due Date: 2026-09-09
+
+Line Item: Freight and customs handling, August shipments
+Subtotal:            10,822.70 USD
+Sales Tax (7.0%):     757.59 USD
+Total Amount Due:    11,580.29 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

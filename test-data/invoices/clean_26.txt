@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: NPS-2026-4026
+Vendor Name: Nod Publishers Solutions Ltd
+Remit-To Bank Account: IBAN-DE**63****2112
+Purchase Order Number: PO-40235
+Invoice Date: 2026-08-15
+Due Date: 2026-09-14
+
+Line Item: Replacement components and expedited assembly labor
+Subtotal:            13,637.31 USD
+Sales Tax (7.5%):     1,022.80 USD
+Total Amount Due:    14,660.10 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

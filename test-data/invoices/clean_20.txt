@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TSL-2026-4020
+Vendor Name: Tru-Fit Supplies LLC
+Remit-To Bank Account: WIRE-****1939
+Purchase Order Number: PO-35781
+Invoice Date: 2026-08-09
+Due Date: 2026-09-08
+
+Line Item: Packaging materials and print run, SKU refresh
+Subtotal:            3,760.26 USD
+Sales Tax (8.5%):     319.62 USD
+Total Amount Due:    4,079.88 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

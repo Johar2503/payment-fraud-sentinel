@@ -1,0 +1,13 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: CN-2026-0455
+Vendor Name: Wingtip Supplies Inc
+Remit-To Bank Account: ACH-****3355
+Purchase Order Number: PO-41200
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Credit for returned goods (RMA-8891)
+Total Amount Due: -12,750.00 USD
+Currency: USD

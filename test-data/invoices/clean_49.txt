@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: TSL-2026-4049
+Vendor Name: Tailspin Systems Ltd
+Remit-To Bank Account: WIRE-****1976
+Purchase Order Number: PO-32479
+Invoice Date: 2026-08-17
+Due Date: 2026-09-16
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            34,815.65 USD
+Sales Tax (8.5%):     2,959.33 USD
+Total Amount Due:    37,774.98 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

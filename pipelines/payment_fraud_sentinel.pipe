@@ -1,0 +1,181 @@
+{
+	"components": [
+		{
+			"id": "webhook_1",
+			"provider": "webhook",
+			"config": { "hideForm": true, "mode": "Source", "parameters": {}, "type": "webhook" },
+			"ui": { "position": { "x": 20, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "hash_1",
+			"provider": "hash",
+			"config": {},
+			"input": [{ "lane": "tags", "from": "webhook_1" }],
+			"ui": { "position": { "x": 240, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "parse_1",
+			"provider": "parse",
+			"config": {},
+			"input": [{ "lane": "tags", "from": "hash_1" }],
+			"ui": { "position": { "x": 460, "y": 200 }, "measured": { "width": 150, "height": 66 } }
+		},
+
+		{
+			"id": "preprocessor_langchain_1",
+			"provider": "preprocessor_langchain",
+			"config": { "profile": "default", "default": { "splitter": "RecursiveCharacterTextSplitter", "mode": "tokens", "tokens": 1000 }, "parameters": {} },
+			"input": [{ "lane": "text", "from": "parse_1" }],
+			"ui": { "position": { "x": 680, "y": 100 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "extract_facts_1",
+			"provider": "extract_facts",
+			"config": {
+				"profile": "default",
+				"default": {
+					"fields": [
+						{ "column": "invoice_number", "type": "text", "defval": "" },
+						{ "column": "vendor_name", "type": "text", "defval": "" },
+						{ "column": "vendor_bank_account", "type": "text", "defval": "" },
+						{ "column": "po_number", "type": "text", "defval": "" },
+						{ "column": "invoice_date", "type": "date", "defval": "" },
+						{ "column": "due_date", "type": "date", "defval": "" },
+						{ "column": "amount", "type": "decimal", "defval": "" },
+						{ "column": "currency", "type": "text", "defval": "" },
+						{ "column": "tax_amount", "type": "decimal", "defval": "" },
+						{ "column": "line_item_description", "type": "text", "defval": "" }
+					],
+					"validate": true,
+					"include_provenance": true
+				},
+				"parameters": {}
+			},
+			"input": [{ "lane": "documents", "from": "preprocessor_langchain_1" }],
+			"ui": { "position": { "x": 900, "y": 100 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "llm_anthropic_extract",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": { "apikey": "${ROCKETRIDE_ANTHROPIC_KEY}", "extendedThinking": false },
+				"parameters": {}
+			},
+			"control": [{ "classType": "llm", "from": "extract_facts_1" }],
+			"ui": { "position": { "x": 900, "y": 300 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "normalize_facts_1",
+			"provider": "normalize_facts",
+			"config": {
+				"profile": "default",
+				"default": {
+					"label_field": "line_item_description",
+					"value_field": "amount",
+					"default_currency": "USD",
+					"decimal_format": "auto",
+					"label_to_metric": {}
+				},
+				"parameters": {}
+			},
+			"input": [{ "lane": "answers", "from": "extract_facts_1" }],
+			"ui": { "position": { "x": 1120, "y": 100 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "schema_validate_1",
+			"provider": "schema_validate",
+			"config": {
+				"profile": "default",
+				"default": {
+					"amount_field": "amount",
+					"currency_field": "currency",
+					"metric_field": "line_item_description",
+					"category_field": "line_item_description",
+					"category_metric_map": {},
+					"sign": "off",
+					"require_provenance": "error"
+				},
+				"parameters": {}
+			},
+			"input": [{ "lane": "answers", "from": "normalize_facts_1" }],
+			"ui": { "position": { "x": 1340, "y": 100 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "response_answers_audited",
+			"provider": "response_answers",
+			"config": { "laneName": "audited_facts" },
+			"input": [{ "lane": "answers", "from": "schema_validate_1" }],
+			"ui": { "position": { "x": 1560, "y": 100 }, "measured": { "width": 150, "height": 66 } }
+		},
+
+		{
+			"id": "anomaly_detector_1",
+			"provider": "anomaly_detector",
+			"config": {
+				"profile": "z_score",
+				"z_score": {
+					"sensitivity": 2,
+					"windowSize": 100,
+					"metric": "amount",
+					"warningThreshold": 2,
+					"criticalThreshold": 3
+				},
+				"parameters": {}
+			},
+			"input": [{ "lane": "documents", "from": "extract_facts_1" }],
+			"ui": { "position": { "x": 1120, "y": 300 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "response_documents_anomalies",
+			"provider": "response_documents",
+			"config": { "laneName": "amount_anomalies" },
+			"input": [{ "lane": "documents", "from": "anomaly_detector_1" }],
+			"ui": { "position": { "x": 1340, "y": 300 }, "measured": { "width": 150, "height": 66 } }
+		},
+
+		{
+			"id": "question_1",
+			"provider": "question",
+			"config": { "type": "question" },
+			"input": [{ "lane": "text", "from": "parse_1" }],
+			"ui": { "position": { "x": 680, "y": 420 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "prompt_1",
+			"provider": "prompt",
+			"config": {
+				"instructions": [
+					"You are an accounts-payable fraud analyst for a mid-size finance team. The text is a single supplier invoice submitted for payment.",
+					"Assess it for AP fraud and error indicators: duplicate or sequential invoice numbers, round-sum amounts, amounts just under approval thresholds, mismatched or missing PO reference, vendor bank details that differ from an established vendor master, new or recently changed payee bank account, unusual urgency, mismatched vendor name vs bank account holder, tax math that does not add up, and inconsistent or missing dates.",
+					"Return JSON only: { \"risk_score\": 0-100, \"risk_level\": \"low|medium|high\", \"flags\": [ { \"type\": string, \"evidence\": string } ], \"recommended_action\": \"auto-approve|manual-review|hold-and-verify\", \"rationale\": string }."
+				],
+				"parameters": {}
+			},
+			"input": [{ "lane": "questions", "from": "question_1" }],
+			"ui": { "position": { "x": 900, "y": 420 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "llm_anthropic_assess",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": { "apikey": "${ROCKETRIDE_ANTHROPIC_KEY}", "extendedThinking": false },
+				"parameters": {}
+			},
+			"input": [{ "lane": "questions", "from": "prompt_1" }],
+			"ui": { "position": { "x": 1120, "y": 480 }, "measured": { "width": 150, "height": 66 } }
+		},
+		{
+			"id": "response_answers_risk",
+			"provider": "response_answers",
+			"config": { "laneName": "risk_assessment" },
+			"input": [{ "lane": "answers", "from": "llm_anthropic_assess" }],
+			"ui": { "position": { "x": 1340, "y": 480 }, "measured": { "width": 150, "height": 66 } }
+		}
+	],
+	"source": "webhook_1",
+	"project_id": "4dae10f1-ef41-4677-8216-66f23bb0c397",
+	"viewport": { "x": 0, "y": 0, "zoom": 1 },
+	"version": 1
+}

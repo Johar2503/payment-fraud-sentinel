@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: THC-2026-4022
+Vendor Name: Tru-Fit Holdings Co
+Remit-To Bank Account: WIRE-****2587
+Purchase Order Number: PO-19262
+Invoice Date: 2026-08-23
+Due Date: 2026-09-22
+
+Line Item: Bulk raw material supply — grade A pellets, 12 pallets
+Subtotal:            33,265.77 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    33,265.77 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

@@ -1,0 +1,93 @@
+/* =============================================================================
+ * Payment Fraud Sentinel — motion primitives
+ *
+ * Two ideas only:
+ *   .pfs-reveal   one orchestrated, staggered entrance for a case panel. Set
+ *                 `style={{ '--i': n }}` on each direct child to order it.
+ *   .pfs-expand   height animation for evidence disclosures. Toggle via the
+ *                 `data-open` attribute. Grid-rows 0fr -> 1fr keeps it in flow
+ *                 with no magic max-height number.
+ *
+ * Everything collapses to an instant, motionless state under
+ * prefers-reduced-motion: reduce.
+ * ========================================================================== */
+
+@keyframes pfs-reveal-in {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.pfs-reveal > * {
+	opacity: 0;
+	animation: pfs-reveal-in 0.38s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+	animation-delay: calc(var(--i, 0) * 55ms);
+}
+
+.pfs-expand {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 180ms ease;
+}
+.pfs-expand[data-open='true'] {
+	grid-template-rows: 1fr;
+}
+.pfs-expand > .pfs-expand-inner {
+	overflow: hidden;
+	min-height: 0;
+}
+
+/* Indeterminate progress bar — a slice sliding L→R while a batch runs, so a
+   single-file run doesn't sit frozen at 0%. Reduced-motion falls back to a
+   static partial fill (see the media query below). */
+@keyframes pfs-indeterminate {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(400%);
+	}
+}
+.pfs-bar-indeterminate {
+	width: 25%;
+	animation: pfs-indeterminate 1.15s ease-in-out infinite;
+}
+
+/* Deliberate, action-driven transitions — never auto-running on load. */
+.pfs-press {
+	transition: background-color 120ms ease, border-color 120ms ease, transform 80ms ease;
+}
+.pfs-press:active {
+	transform: translateY(1px);
+}
+.pfs-row {
+	transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.pfs-reveal > * {
+		opacity: 1;
+		animation: none;
+		transform: none;
+	}
+	.pfs-bar-indeterminate {
+		animation: none;
+		width: 40%;
+		transform: none;
+	}
+	.pfs-expand {
+		transition: none;
+	}
+	.pfs-press,
+	.pfs-row {
+		transition: none;
+	}
+	.pfs-press:active {
+		transform: none;
+	}
+}

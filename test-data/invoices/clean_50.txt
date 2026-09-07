@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: MIL-2026-4050
+Vendor Name: Margies Industries LLC
+Remit-To Bank Account: ACH-****1095
+Purchase Order Number: PO-15620
+Invoice Date: 2026-08-15
+Due Date: 2026-09-14
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            50,903.88 USD
+Sales Tax (7.5%):     3,817.79 USD
+Total Amount Due:    54,721.67 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

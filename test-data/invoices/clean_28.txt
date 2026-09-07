@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TTI-2026-4028
+Vendor Name: Trey Traders Inc
+Remit-To Bank Account: ACH-****1498
+Purchase Order Number: PO-65964
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: Marketing campaign production and media placement
+Subtotal:            4,700.69 USD
+Sales Tax (8.0%):     376.05 USD
+Total Amount Due:    5,076.74 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

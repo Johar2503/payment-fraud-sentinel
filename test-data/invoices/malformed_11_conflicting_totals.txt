@@ -1,0 +1,16 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: LIT-2026-6620
+Vendor Name: Litware Consulting LLC
+Remit-To Bank Account: WIRE-****7788
+Purchase Order Number: PO-62210
+Invoice Date: 2026-08-14
+Due Date: 2026-09-13
+
+Line Item: Phase 1 delivery
+Subtotal: 22,000.00 USD
+Sales Tax (8.0%): 1,760.00 USD
+Total Amount Due: 31,240.00 USD
+Balance Payable: 18,900.00 USD
+Currency: USD

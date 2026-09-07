@@ -1,0 +1,8 @@
+# RocketRide app workspace — one root install links every app under apps/.
+packages:
+  - 'apps/*'
+  # Standalone SDK frontend manages its own node_modules (npm) — keep it out of
+  # the pnpm workspace so root installs and its build toolchain don't collide.
+  - '!apps/paymentFraudSentinel-standalone'
+onlyBuiltDependencies:
+  - esbuild

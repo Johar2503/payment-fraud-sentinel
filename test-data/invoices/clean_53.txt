@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: LSG-2026-4053
+Vendor Name: Litware Solutions Group
+Remit-To Bank Account: ACH-****2766
+Purchase Order Number: PO-40653
+Invoice Date: 2026-08-22
+Due Date: 2026-09-21
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            21,092.75 USD
+Sales Tax (8.5%):     1,792.88 USD
+Total Amount Due:    22,885.64 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

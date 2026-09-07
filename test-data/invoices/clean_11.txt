@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: WWT-2026-4011
+Vendor Name: Wide World Traders Ltd
+Remit-To Bank Account: IBAN-DE**53****8924
+Purchase Order Number: PO-34662
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: Quarterly managed analytics platform subscription and standard support
+Subtotal:            15,781.16 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    15,781.16 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

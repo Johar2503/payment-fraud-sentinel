@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: AWS-2026-4032
+Vendor Name: Adventure Works Services Ltd
+Remit-To Bank Account: ACH-****7990
+Purchase Order Number: PO-43038
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            2,399.24 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    2,399.24 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

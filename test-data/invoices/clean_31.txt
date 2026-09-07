@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: PSL-2026-4031
+Vendor Name: Parnell Supplies Ltd
+Remit-To Bank Account: IBAN-DE**21****4229
+Purchase Order Number: PO-82028
+Invoice Date: 2026-08-12
+Due Date: 2026-09-11
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            1,696.37 USD
+Sales Tax (7.0%):     118.75 USD
+Total Amount Due:    1,815.12 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

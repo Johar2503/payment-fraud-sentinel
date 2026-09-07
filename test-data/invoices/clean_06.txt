@@ -1,0 +1,17 @@
+NORTHGATE FACILITIES LLC — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: TIC-2026-4006
+Vendor Name: Trey Industries Co
+Remit-To Bank Account: WIRE-****4823
+Purchase Order Number: PO-96869
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: Software license true-up, additional seats
+Subtotal:            45,213.97 USD
+Sales Tax (8.0%):     3,617.12 USD
+Total Amount Due:    48,831.09 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

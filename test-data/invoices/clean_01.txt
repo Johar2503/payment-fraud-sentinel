@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: AWS-2026-4001
+Vendor Name: Adventure Works Services Ltd
+Remit-To Bank Account: ACH-****7990
+Purchase Order Number: PO-71032
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: Quarterly managed analytics platform subscription and standard support
+Subtotal:            2,332.13 USD
+Sales Tax (8.0%):     186.57 USD
+Total Amount Due:    2,518.70 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

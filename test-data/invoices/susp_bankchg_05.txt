@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: PTC-2026-4078
+Vendor Name: Proseware Traders Co
+Remit-To Bank Account: ACH-****6096
+Purchase Order Number: PO-30643
+Invoice Date: 2026-08-22
+Due Date: 2026-09-21
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            21,204.82 USD
+Sales Tax (8.0%):     1,696.39 USD
+Total Amount Due:    22,901.20 USD
+Currency: USD
+
+Our finance team has migrated banks. Kindly update your records to the remit-to account listed here.

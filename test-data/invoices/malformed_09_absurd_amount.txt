@@ -1,0 +1,13 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: XXL-2026-0001
+Vendor Name: Consolidated Distribution Corp
+Remit-To Bank Account: ACH-****9001
+Purchase Order Number: PO-99999
+Invoice Date: 2026-08-20
+Due Date: 2026-09-19
+
+Line Item: Miscellaneous
+Total Amount Due: 9,999,999,999.99 USD
+Currency: USD

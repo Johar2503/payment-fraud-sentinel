@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: NSL-2026-4010
+Vendor Name: Northwind Solutions LLC
+Remit-To Bank Account: WIRE-****1091
+Purchase Order Number: PO-44311
+Invoice Date: 2026-08-13
+Due Date: 2026-09-12
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            20,905.69 USD
+Sales Tax (8.0%):     1,672.46 USD
+Total Amount Due:    22,578.15 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

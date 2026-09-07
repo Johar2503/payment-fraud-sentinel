@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: PTC-2026-4021
+Vendor Name: Proseware Traders Co
+Remit-To Bank Account: ACH-****5587
+Purchase Order Number: PO-46422
+Invoice Date: 2026-08-13
+Due Date: 2026-09-12
+
+Line Item: Managed security monitoring — monthly retainer
+Subtotal:            26,708.55 USD
+Sales Tax (8.5%):     2,270.23 USD
+Total Amount Due:    28,978.78 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

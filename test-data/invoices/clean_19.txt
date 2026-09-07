@@ -1,0 +1,17 @@
+MERIDIAN INDUSTRIAL GROUP — AP DEPARTMENT
+SUPPLIER INVOICE
+
+Invoice Number: PTC-2026-4019
+Vendor Name: Proseware Traders Co
+Remit-To Bank Account: IBAN-DE**30****8826
+Purchase Order Number: PO-80636
+Invoice Date: 2026-08-23
+Due Date: 2026-09-22
+
+Line Item: Software license true-up, additional seats
+Subtotal:            17,631.12 USD
+Sales Tax (7.5%):     1,322.33 USD
+Total Amount Due:    18,953.46 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

@@ -1,0 +1,833 @@
+{
+	"components": [
+		{
+			"id": "webhook_invoice",
+			"provider": "webhook",
+			"config": {
+				"hideForm": true,
+				"mode": "Source",
+				"parameters": {},
+				"type": "webhook"
+			},
+			"ui": {
+				"position": {
+					"x": 20,
+					"y": 240
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "hash_1",
+			"provider": "hash",
+			"config": {},
+			"input": [
+				{
+					"lane": "tags",
+					"from": "webhook_invoice"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 220,
+					"y": 240
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "parse_1",
+			"provider": "parse",
+			"config": {},
+			"input": [
+				{
+					"lane": "tags",
+					"from": "hash_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 420,
+					"y": 240
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "preprocessor_langchain_1",
+			"provider": "preprocessor_langchain",
+			"config": {
+				"profile": "default",
+				"default": {
+					"splitter": "RecursiveCharacterTextSplitter",
+					"mode": "tokens",
+					"tokens": 1000
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "text",
+					"from": "parse_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 620,
+					"y": 140
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "extract_facts_1",
+			"provider": "extract_facts",
+			"config": {
+				"profile": "default",
+				"default": {
+					"fields": [
+						{
+							"column": "invoice_number",
+							"type": "text",
+							"defval": ""
+						},
+						{
+							"column": "vendor_name",
+							"type": "text",
+							"defval": ""
+						},
+						{
+							"column": "vendor_bank_account",
+							"type": "text",
+							"defval": ""
+						},
+						{
+							"column": "po_number",
+							"type": "text",
+							"defval": ""
+						},
+						{
+							"column": "invoice_date",
+							"type": "date",
+							"defval": ""
+						},
+						{
+							"column": "due_date",
+							"type": "date",
+							"defval": ""
+						},
+						{
+							"column": "amount",
+							"type": "decimal",
+							"defval": ""
+						},
+						{
+							"column": "currency",
+							"type": "text",
+							"defval": ""
+						},
+						{
+							"column": "tax_amount",
+							"type": "decimal",
+							"defval": ""
+						},
+						{
+							"column": "line_item_description",
+							"type": "text",
+							"defval": ""
+						}
+					],
+					"validate": false,
+					"include_provenance": true
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "documents",
+					"from": "preprocessor_langchain_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 820,
+					"y": 140
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "normalize_facts_1",
+			"provider": "normalize_facts",
+			"config": {
+				"profile": "default",
+				"default": {
+					"label_field": "line_item_description",
+					"value_field": "amount",
+					"default_currency": "USD",
+					"decimal_format": "auto",
+					"label_to_metric": {}
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "extract_facts_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1020,
+					"y": 140
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "schema_validate_1",
+			"provider": "schema_validate",
+			"config": {
+				"profile": "default",
+				"default": {
+					"amount_field": "amount",
+					"currency_field": "currency",
+					"metric_field": "line_item_description",
+					"category_field": "line_item_description",
+					"category_metric_map": {},
+					"sign": "off",
+					"require_provenance": "error"
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "normalize_facts_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1220,
+					"y": 140
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "answer_documents_facts",
+			"provider": "answer_documents",
+			"config": {},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "schema_validate_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1420,
+					"y": 140
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "question_invoice",
+			"provider": "question",
+			"config": {
+				"type": "question"
+			},
+			"input": [
+				{
+					"lane": "text",
+					"from": "parse_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 620,
+					"y": 420
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "prompt_case",
+			"provider": "prompt",
+			"config": {
+				"instructions": [
+					"You are the triage controller for Payment Fraud Sentinel. You receive one supplier invoice (the question text) plus one context document: the audited/normalised extracted facts. You produce the complete case record for the human approval queue in a single pass.",
+					"Step 0 - processability gate (do this FIRST, before any tool): look for the context facts document. If NO facts/context document is attached to this request at all, OR it is empty, OR it has NO non-empty vendor_name AND NO non-empty amount AND NO non-empty invoice_number, then the upload could not be parsed into an invoice. In that case: do NOT call any tool, do NOT query the vendor database, do NOT run Python or risk analysis, do NOT narrate or explain, do NOT write any sentence such as 'I need to check' - your ENTIRE response must be exactly this one JSON object and nothing else (only the summary wording may vary): {\"queue_status\":\"pending_review\",\"unprocessable\":true,\"invoice\":{\"invoice_number\":\"\",\"vendor_name\":\"\",\"amount\":\"\",\"currency\":\"\"},\"facts\":null,\"amount_analysis\":{\"invoice_amount\":0,\"vendor_mean_amount\":null,\"ratio_vs_mean\":null,\"over_2x_mean\":false},\"vendor\":{\"found\":false,\"vendor_id\":null,\"mean_amount\":null,\"bank_account_known\":false,\"amount_over_2x_mean\":false,\"days_since_first_seen\":null},\"deterministic_hold\":false,\"rules_fired\":[],\"risk\":{\"risk_score\":50,\"risk_level\":\"high\",\"flags\":[{\"type\":\"unprocessable_document\",\"evidence\":\"extract_facts returned an empty/near-empty facts document; the upload could not be read as an invoice\"}]},\"verification\":{\"status\":\"pending\",\"result\":null},\"summary\":\"Document could not be parsed into an invoice - routed to manual review.\"}. Only when the facts document has real content do you continue to Step 1.",
+					"You have a real Python code-execution tool. For any processable invoice (i.e. once the Step 0 gate has passed) you MUST invoke it for real for the Step 2 computation. NEVER write tool-call syntax as plain text, NEVER label output 'simulated', and NEVER invent a vendor record or a computation result. If a tool call errors, report it rather than fabricating data. Other than the Step 0 fast path, an answer whose Step 2 numbers did not come from a genuine Python tool call is invalid.",
+					"Step 1 - vendor lookup: the vendor master is the JSON array in the next instruction (VENDOR_MASTER) - 50 records, each { vendor_id, name, known_bank_accounts (array), historical_invoice_amounts (array of numbers), first_seen_date, risk_score, risk_history (array) }. Find the record whose name matches the invoice vendor_name: compare case-insensitively, ignore surrounding punctuation/whitespace and common company suffixes (Inc, Ltd, LLC, Co, Corp, GmbH, Group, Holdings, Partners). Accept an unambiguous close match as found. If exactly one record matches, it is the vendor row for the rest of this case. If none match or the match is ambiguous, set vendor.found=false, vendor_id=null, and treat the vendor as unknown. Do NOT call a tool for this step - read directly from VENDOR_MASTER.",
+					"VENDOR_MASTER = [{\"vendor_id\":\"V0001\",\"name\":\"Alpine Ski Systems Group\",\"known_bank_accounts\":[\"ACH-****3641\",\"ACH-****6469\"],\"historical_invoice_amounts\":[13713.76,25861.58,18921.29,23275.95,24536.33,11469.98,14537.03,22291.46,19883.48,15212.59,11386.39,24749.45,15120.88,16168.18,62366.2],\"first_seen_date\":\"2025-12-23\",\"risk_score\":10,\"risk_history\":[]},{\"vendor_id\":\"V0002\",\"name\":\"Graphic Design Institute Holdings Group\",\"known_bank_accounts\":[\"WIRE-****2053\"],\"historical_invoice_amounts\":[22746.73,33178.29,29639.41,36749.65,19403.67,21880.75,23450.69,21357,19772.59,17781.69,16387.82,19508.68,30325.91,23118.54,38361.76],\"first_seen_date\":\"2024-12-24\",\"risk_score\":9,\"risk_history\":[]},{\"vendor_id\":\"V0003\",\"name\":\"Blue Yonder Systems Inc\",\"known_bank_accounts\":[\"ACH-****7172\",\"ACH-****1200\"],\"historical_invoice_amounts\":[32961.9,31564.34,18365.99,30578.45,34897.43,34319.73,25410.29,24146.18,23052.35,26675.83,30868,25645.03,19259.31],\"first_seen_date\":\"2023-03-07\",\"risk_score\":3,\"risk_history\":[]},{\"vendor_id\":\"V0004\",\"name\":\"Parnell Supplies Ltd\",\"known_bank_accounts\":[\"IBAN-DE**21****4229\",\"WIRE-****3419\"],\"historical_invoice_amounts\":[1257.62,2347.99,2446.68,1547.52,1981.14,2044.37,1601.09,2406.59,1329.02,1978.12,2289.02,2514.9,2344.39,2146.89,1377.54,2282.39,2056.35],\"first_seen_date\":\"2026-01-05\",\"risk_score\":3,\"risk_history\":[]},{\"vendor_id\":\"V0005\",\"name\":\"Tru-Fit Holdings Co\",\"known_bank_accounts\":[\"WIRE-****2587\"],\"historical_invoice_amounts\":[18627.04,33508.07,20256.04,29018.76,19505.68,18510.68,13360.21,29014.22,32809.21],\"first_seen_date\":\"2024-02-24\",\"risk_score\":84,\"risk_history\":[{\"date\":\"2024-04-03\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"},{\"date\":\"2024-03-03\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"},{\"date\":\"2024-07-17\",\"event\":\"periodic_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0006\",\"name\":\"Wingtip Distribution GmbH\",\"known_bank_accounts\":[\"ACH-****1017\",\"WIRE-****5598\",\"ACH-****2522\"],\"historical_invoice_amounts\":[14642.48,8095.72,10062.02,6557.64,10375.14,10581.93,7244.82,11127.06,15573.89],\"first_seen_date\":\"2023-11-04\",\"risk_score\":23,\"risk_history\":[{\"date\":\"2024-01-02\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0007\",\"name\":\"Trey Industries Co\",\"known_bank_accounts\":[\"WIRE-****4823\"],\"historical_invoice_amounts\":[26019.07,42380.83,48516.91,28674.65,49353.67,19433.08],\"first_seen_date\":\"2026-01-09\",\"risk_score\":26,\"risk_history\":[{\"date\":\"2026-01-26\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"}]},{\"vendor_id\":\"V0008\",\"name\":\"Tru-Fit Solutions Co\",\"known_bank_accounts\":[\"ACH-****2102\"],\"historical_invoice_amounts\":[34057.53],\"first_seen_date\":\"2026-08-05\",\"risk_score\":11,\"risk_history\":[{\"date\":\"2026-08-26\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0009\",\"name\":\"Lucerne Logistics GmbH\",\"known_bank_accounts\":[\"ACH-****3346\",\"IBAN-DE**77****9318\"],\"historical_invoice_amounts\":[1503.07,1300.47,825.06,1411.04,1546.4,1587.66,1049.58,849.41,1267.8,992.65,1359,1026.79,1473.24,1215.63,1335.9],\"first_seen_date\":\"2025-03-20\",\"risk_score\":23,\"risk_history\":[{\"date\":\"2025-06-11\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0010\",\"name\":\"Woodgrove Solutions Group\",\"known_bank_accounts\":[\"ACH-****7755\"],\"historical_invoice_amounts\":[17665.08,20030.53,28343.54,34588.32,22411.48,26387.98,29628.21,18230.93,36208.19,34097.86,38719.65,21958.09,22507.66,20801.28,28867.21,31734.1,96750.4],\"first_seen_date\":\"2025-06-05\",\"risk_score\":7,\"risk_history\":[]},{\"vendor_id\":\"V0011\",\"name\":\"Litware Distribution Inc\",\"known_bank_accounts\":[\"ACH-****2128\",\"WIRE-****2086\",\"WIRE-****3337\"],\"historical_invoice_amounts\":[2301.53,1909.52,1955.4,2986.65,2941.85,1226.58,2332.87,1934.04,2140.33,2180.1,2443.04,1905.73,1478.24,1249.43,2564.6,2842.13],\"first_seen_date\":\"2023-06-19\",\"risk_score\":3,\"risk_history\":[]},{\"vendor_id\":\"V0012\",\"name\":\"Fourth Coffee Systems Ltd\",\"known_bank_accounts\":[\"WIRE-****4561\",\"ACH-****8544\",\"IBAN-DE**16****6041\"],\"historical_invoice_amounts\":[8199.64,10823.56,6002.78,9251.5,6306.67,5419.21,6005.1,6617.52,10108.56,10063.77,8404.45],\"first_seen_date\":\"2023-07-31\",\"risk_score\":10,\"risk_history\":[]},{\"vendor_id\":\"V0013\",\"name\":\"Fincher Manufacturing Corp\",\"known_bank_accounts\":[\"WIRE-****5193\"],\"historical_invoice_amounts\":[17940.91,18500.39,30121.12,27003.38,44774.46,22287.37,47080.8,32882.49,24188.42,28488.81,46607.97,35553.32],\"first_seen_date\":\"2022-09-18\",\"risk_score\":46,\"risk_history\":[{\"date\":\"2022-11-27\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"},{\"date\":\"2023-02-09\",\"event\":\"aml_screen\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"}]},{\"vendor_id\":\"V0014\",\"name\":\"Wingtip Partners LLC\",\"known_bank_accounts\":[\"ACH-****8976\"],\"historical_invoice_amounts\":[50993.09,34281.93,34502.5,30366.9,40309.82,35652.28],\"first_seen_date\":\"2022-07-18\",\"risk_score\":15,\"risk_history\":[]},{\"vendor_id\":\"V0015\",\"name\":\"Adventure Works Services Ltd\",\"known_bank_accounts\":[\"ACH-****7990\"],\"historical_invoice_amounts\":[3542.78,1793.92,3896.73,3260.97,3088.61,3615.52,2625.08,3363.07,1795.64,2872.42,2467.27,3183.61,2025.78,3489.66,3752.69,1589.79],\"first_seen_date\":\"2022-04-15\",\"risk_score\":17,\"risk_history\":[]},{\"vendor_id\":\"V0016\",\"name\":\"Coho Logistics Inc\",\"known_bank_accounts\":[\"ACH-****9731\",\"WIRE-****4834\"],\"historical_invoice_amounts\":[48147.48,50165.87,32500.1],\"first_seen_date\":\"2024-02-06\",\"risk_score\":17,\"risk_history\":[]},{\"vendor_id\":\"V0017\",\"name\":\"Tailspin Distribution Group\",\"known_bank_accounts\":[\"ACH-****2527\",\"ACH-****9258\",\"ACH-****7726\"],\"historical_invoice_amounts\":[14478.7,29284.57,25473.44,29528.16,14816.52,11357.76,11014.14,24480.97,17103.69,21817.77,18251.77,16794.99],\"first_seen_date\":\"2026-03-27\",\"risk_score\":14,\"risk_history\":[]},{\"vendor_id\":\"V0018\",\"name\":\"Wide World Solutions Co\",\"known_bank_accounts\":[\"ACH-****7427\"],\"historical_invoice_amounts\":[14889.83,15697.18,16634.61,14137.37,11336.08,9319.89,16618.99,11099.65,15723.79,10704.31,15596.24,14064.72,15289.14,9949.94,14831.94],\"first_seen_date\":\"2024-02-26\",\"risk_score\":12,\"risk_history\":[]},{\"vendor_id\":\"V0019\",\"name\":\"Nod Publishers Consulting Group\",\"known_bank_accounts\":[\"WIRE-****5089\",\"ACH-****7638\"],\"historical_invoice_amounts\":[9531.25,8487.78,6225.47,13135.23,12931.27,15915.08,9249.67,15425.85,14452.7,15703.15,12280.01,9292.65,13910.45,13914.72,9613,7804.31,37444.2],\"first_seen_date\":\"2026-08-17\",\"risk_score\":18,\"risk_history\":[{\"date\":\"2026-08-18\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0020\",\"name\":\"Tailspin Systems Ltd\",\"known_bank_accounts\":[\"WIRE-****1976\"],\"historical_invoice_amounts\":[28508.65,47393.65,47060.5,36627.2,41443.67,33530.08,24205.7],\"first_seen_date\":\"2025-05-21\",\"risk_score\":20,\"risk_history\":[]},{\"vendor_id\":\"V0021\",\"name\":\"Nod Publishers Systems Inc\",\"known_bank_accounts\":[\"ACH-****6339\"],\"historical_invoice_amounts\":[17960.46,18942.82,25086.38,16679.54,28628.56,27038.55,23498.79,18597.67,26984.71,23954.84,20801.93,25071.12,12151.01],\"first_seen_date\":\"2022-10-28\",\"risk_score\":24,\"risk_history\":[{\"date\":\"2022-11-01\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0022\",\"name\":\"Fabrikam Services Inc\",\"known_bank_accounts\":[\"ACH-****9972\"],\"historical_invoice_amounts\":[18820.8,17209.89,22925.91,22606.07,17056.89,33273.65,17950.02,39365.89,16893.15,36197.56,17278.59,37227.65,35620.17,24913.12,27053.41,32580.8],\"first_seen_date\":\"2022-07-08\",\"risk_score\":6,\"risk_history\":[]},{\"vendor_id\":\"V0023\",\"name\":\"Tailspin Systems Inc\",\"known_bank_accounts\":[\"ACH-****6186\",\"IBAN-DE**74****5361\"],\"historical_invoice_amounts\":[19775.16,20687.79,20581.05,12217.71,10375.05,15629.96,19157.32,15559.45,10079.03,20345.58,18011.92,19933.43],\"first_seen_date\":\"2025-02-11\",\"risk_score\":21,\"risk_history\":[]},{\"vendor_id\":\"V0024\",\"name\":\"Humongous Distribution Ltd\",\"known_bank_accounts\":[\"ACH-****3683\",\"ACH-****9973\",\"WIRE-****5183\"],\"historical_invoice_amounts\":[36361.54,22670.36,17504.6,24106.11,22171.66,33717.19,39142.64,21139.47,29768.22,24038.38,31071.22,24448.04],\"first_seen_date\":\"2025-05-08\",\"risk_score\":8,\"risk_history\":[]},{\"vendor_id\":\"V0025\",\"name\":\"Bellows Industries Group\",\"known_bank_accounts\":[\"ACH-****8448\",\"ACH-****5702\",\"ACH-****5787\"],\"historical_invoice_amounts\":[1630.09,1049.11,1906.34,1475.77,721.06,1282.97,1901.81,961.18,908.41,1051.24,1066.68,1772.3,1474.82,1591.23,1020.69,1209.55,1510.94,1644.36],\"first_seen_date\":\"2025-05-28\",\"risk_score\":26,\"risk_history\":[{\"date\":\"2025-07-04\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"}]},{\"vendor_id\":\"V0026\",\"name\":\"VanArsdel Holdings LLC\",\"known_bank_accounts\":[\"WIRE-****3274\",\"WIRE-****8933\"],\"historical_invoice_amounts\":[13700.82,32327.83,22153.15,12295.76,29466.77,15669.78,31028.35,21320.1,28300.27,29253.34,16153.4,12326.05,31888.82,13772.92],\"first_seen_date\":\"2024-12-22\",\"risk_score\":53,\"risk_history\":[{\"date\":\"2024-12-24\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"},{\"date\":\"2025-03-24\",\"event\":\"periodic_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0027\",\"name\":\"Tru-Fit Solutions Ltd\",\"known_bank_accounts\":[\"WIRE-****6331\",\"ACH-****1629\",\"WIRE-****8618\"],\"historical_invoice_amounts\":[6860.67,4646.29,6859.06,9159.32,6628.62,7556.36,9556.62,10090.37,10895.33,7214.22,5391.15],\"first_seen_date\":\"2024-06-17\",\"risk_score\":5,\"risk_history\":[]},{\"vendor_id\":\"V0028\",\"name\":\"Wide World Industries Inc\",\"known_bank_accounts\":[\"IBAN-DE**43****1764\",\"ACH-****4039\"],\"historical_invoice_amounts\":[17825.59,18316.18,15821.89,8043.54,15447.21,7808.48,13926.18,7085.3,15507.43,11663.58,9414.82,18000.32,17303.51,15514.28,41803],\"first_seen_date\":\"2022-08-07\",\"risk_score\":20,\"risk_history\":[]},{\"vendor_id\":\"V0029\",\"name\":\"Northwind Solutions Ltd\",\"known_bank_accounts\":[\"WIRE-****5865\"],\"historical_invoice_amounts\":[10579.8,7086.05,10768.77,7081.77,13529.28,11372.36,11563.91,10442.24,14322.5,5691.69,7538.64,10281.44,12262.63,9238.48],\"first_seen_date\":\"2023-09-06\",\"risk_score\":26,\"risk_history\":[{\"date\":\"2023-11-29\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0030\",\"name\":\"Relecloud Services LLC\",\"known_bank_accounts\":[\"ACH-****6023\"],\"historical_invoice_amounts\":[4668.19,6044.55,7049.22],\"first_seen_date\":\"2026-08-02\",\"risk_score\":8,\"risk_history\":[{\"date\":\"2026-08-26\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0031\",\"name\":\"Graphic Design Institute Traders Co\",\"known_bank_accounts\":[\"ACH-****3747\",\"IBAN-DE**21****7192\",\"WIRE-****8505\"],\"historical_invoice_amounts\":[2587.99,3305.3,3027.06,3108.31,2667.93,2151.01,2887.95,2203.12,2654.93,2861.16,2268.03,2633.07,2981.96,2161.29],\"first_seen_date\":\"2022-11-22\",\"risk_score\":10,\"risk_history\":[]},{\"vendor_id\":\"V0032\",\"name\":\"Northwind Solutions LLC\",\"known_bank_accounts\":[\"WIRE-****9895\",\"WIRE-****2019\",\"WIRE-****1091\"],\"historical_invoice_amounts\":[23437.25,30256.51,21781.9,28416.54,27341.92,47916.42,35560.71],\"first_seen_date\":\"2022-06-04\",\"risk_score\":4,\"risk_history\":[]},{\"vendor_id\":\"V0033\",\"name\":\"Proseware Consulting GmbH\",\"known_bank_accounts\":[\"WIRE-****7384\",\"ACH-****3530\",\"ACH-****4718\"],\"historical_invoice_amounts\":[14840.57,6786.11,7217.71,13412.23,7585.9,7542.62,10645.97,7836.86,12333.18,6515.07],\"first_seen_date\":\"2024-12-20\",\"risk_score\":3,\"risk_history\":[]},{\"vendor_id\":\"V0034\",\"name\":\"City Power Consulting Ltd\",\"known_bank_accounts\":[\"WIRE-****2657\",\"WIRE-****9878\",\"ACH-****1207\"],\"historical_invoice_amounts\":[19243.7,15373.61,12261.59,31815.51,22028.04,18471.51,18544.23,23174.51,27541.62,23378.92,21764.2,21824.26],\"first_seen_date\":\"2026-07-30\",\"risk_score\":7,\"risk_history\":[{\"date\":\"2026-08-05\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0035\",\"name\":\"Relecloud Systems Ltd\",\"known_bank_accounts\":[\"ACH-****6785\"],\"historical_invoice_amounts\":[1762.18,1601.54,3060.55,1664.78,1484.44,1548.97,3111.32,2379.3],\"first_seen_date\":\"2024-05-18\",\"risk_score\":17,\"risk_history\":[]},{\"vendor_id\":\"V0036\",\"name\":\"Proseware Traders Co\",\"known_bank_accounts\":[\"IBAN-DE**30****8826\",\"ACH-****8535\",\"ACH-****5587\"],\"historical_invoice_amounts\":[12937.32,14431.29,25120.07,27112.25,19737.31,26328.01,22615.63,19980.89,15562.51,31270.3,18321.89,27297.33,27513.91,29140.45,27779.56,29348.31,22397.88],\"first_seen_date\":\"2026-01-08\",\"risk_score\":14,\"risk_history\":[]},{\"vendor_id\":\"V0037\",\"name\":\"Margies Industries LLC\",\"known_bank_accounts\":[\"WIRE-****2988\",\"ACH-****1552\",\"ACH-****1095\"],\"historical_invoice_amounts\":[23729.69,38676.94,32648.33,28654.83,20734.67,41957.67,103417.8],\"first_seen_date\":\"2022-10-14\",\"risk_score\":4,\"risk_history\":[]},{\"vendor_id\":\"V0038\",\"name\":\"Trey Solutions Inc\",\"known_bank_accounts\":[\"ACH-****4728\",\"IBAN-DE**53****7448\",\"ACH-****7002\"],\"historical_invoice_amounts\":[19697.99,17432.66,11305.36,14582.3,16198.17,21591.28,20343.19,16284.88,19454.66,26314.22,12199.44],\"first_seen_date\":\"2022-11-13\",\"risk_score\":12,\"risk_history\":[]},{\"vendor_id\":\"V0039\",\"name\":\"Nod Publishers Solutions Ltd\",\"known_bank_accounts\":[\"IBAN-DE**63****2112\"],\"historical_invoice_amounts\":[17237.18,24480.86,21686,12489.39,22937.27,20979.12,12152.55,14021.58,21565.03,14225.87,23166.72],\"first_seen_date\":\"2024-03-27\",\"risk_score\":64,\"risk_history\":[{\"date\":\"2024-04-18\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"},{\"date\":\"2024-07-07\",\"event\":\"onboarding_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"}]},{\"vendor_id\":\"V0040\",\"name\":\"Southridge Solutions LLC\",\"known_bank_accounts\":[\"WIRE-****2152\"],\"historical_invoice_amounts\":[13433.65,28946.02,30147.64,16589.4,12998.69,23867.64,25962.32,30842.88,26034.3,22205.28,15116.37,31554.18,22875.49,19485.87,31236.81,18093.69,12734.44],\"first_seen_date\":\"2026-01-27\",\"risk_score\":19,\"risk_history\":[]},{\"vendor_id\":\"V0041\",\"name\":\"Wide World Manufacturing Ltd\",\"known_bank_accounts\":[\"ACH-****4884\",\"ACH-****5198\"],\"historical_invoice_amounts\":[29864.99,17294.86,35241.89,21794.9,18399.7,24406.39,20425.27,29644.69,39276.76,42344.26],\"first_seen_date\":\"2023-12-22\",\"risk_score\":11,\"risk_history\":[]},{\"vendor_id\":\"V0042\",\"name\":\"Wide World Solutions Co\",\"known_bank_accounts\":[\"ACH-****8938\",\"ACH-****5983\",\"ACH-****1237\"],\"historical_invoice_amounts\":[28239.86,55658.19],\"first_seen_date\":\"2026-08-04\",\"risk_score\":15,\"risk_history\":[{\"date\":\"2026-08-26\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0043\",\"name\":\"Trey Traders Inc\",\"known_bank_accounts\":[\"WIRE-****7845\",\"ACH-****1498\",\"ACH-****8070\"],\"historical_invoice_amounts\":[5869.79,9571.9,8041.83,7243.43,5711.19,8088.36,4071.65,9856.74,8908.54,10445.84,5154.43,8326.38,8711.37,9683.42,6019.13,9647.24],\"first_seen_date\":\"2025-08-22\",\"risk_score\":17,\"risk_history\":[]},{\"vendor_id\":\"V0044\",\"name\":\"Litware Solutions Group\",\"known_bank_accounts\":[\"IBAN-DE**16****2782\",\"IBAN-DE**93****1685\",\"ACH-****2766\"],\"historical_invoice_amounts\":[22588.71,14227.53,26335.88,35336.56,14463.2,29012.27,27675.64,19509.14,25004.42,33339.18,16332.39,33094.47],\"first_seen_date\":\"2023-02-08\",\"risk_score\":25,\"risk_history\":[{\"date\":\"2023-04-17\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0045\",\"name\":\"Tru-Fit Supplies LLC\",\"known_bank_accounts\":[\"WIRE-****1939\"],\"historical_invoice_amounts\":[4060.95,4285.39,4550.45,5435.9,4512.45,2830.21,4691],\"first_seen_date\":\"2025-06-18\",\"risk_score\":85,\"risk_history\":[{\"date\":\"2025-07-26\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"},{\"date\":\"2025-07-08\",\"event\":\"periodic_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"},{\"date\":\"2025-09-07\",\"event\":\"human_review\",\"decision\":\"reject\",\"note\":\"Flagged: remittance detail mismatch, held for manual verification.\"}]},{\"vendor_id\":\"V0046\",\"name\":\"VanArsdel Solutions Group\",\"known_bank_accounts\":[\"WIRE-****1946\",\"WIRE-****9843\",\"ACH-****3591\"],\"historical_invoice_amounts\":[6416.82,11512.19,11995.54,7993.9,10952.29,12305.11,8749.53,9573.88,7378.44,4935.34,10743.82,7245.66,10245.93,8609.84,10141.4,7479.45,10065.5,29991.4],\"first_seen_date\":\"2023-06-17\",\"risk_score\":18,\"risk_history\":[]},{\"vendor_id\":\"V0047\",\"name\":\"Tailspin Consulting Group\",\"known_bank_accounts\":[\"ACH-****3354\"],\"historical_invoice_amounts\":[49869.86,21819.8,41820.66,38052.55,40272.69,42901.17,41349.98,50626.83,47171.02,29674.05,22239.4,50506.42,38262.93,31820.54,20466.57,21687.8],\"first_seen_date\":\"2024-04-21\",\"risk_score\":22,\"risk_history\":[{\"date\":\"2024-05-01\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0048\",\"name\":\"Northwind Industries LLC\",\"known_bank_accounts\":[\"IBAN-DE**78****8611\",\"ACH-****2954\"],\"historical_invoice_amounts\":[20039.82,20379.55,18356.11,17820.94,14499.97,20151.07,16165.96,19657.67,15413.03,19008.45,11696.53,9632.45,8787.89,20782.35,11541.6,9472.6,18426.72,9826.25],\"first_seen_date\":\"2026-08-16\",\"risk_score\":7,\"risk_history\":[{\"date\":\"2026-08-26\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0049\",\"name\":\"Wide World Traders Ltd\",\"known_bank_accounts\":[\"WIRE-****2650\",\"IBAN-DE**53****8924\"],\"historical_invoice_amounts\":[28708.21,27399.12,30212.39,25648.35,27968.94,15075.18],\"first_seen_date\":\"2025-11-01\",\"risk_score\":23,\"risk_history\":[{\"date\":\"2025-12-01\",\"event\":\"onboarding_review\",\"decision\":\"approve\",\"note\":\"Cleared after review; no action required.\"}]},{\"vendor_id\":\"V0050\",\"name\":\"Woodgrove Partners GmbH\",\"known_bank_accounts\":[\"WIRE-****2480\",\"ACH-****4580\",\"IBAN-DE**35****9962\"],\"historical_invoice_amounts\":[10255.71,13878.46,10459,11600.3,7373.21,9779.53,12887.76,6665.38],\"first_seen_date\":\"2026-03-13\",\"risk_score\":13,\"risk_history\":[]}]",
+					"Step 2 - deterministic HOLD rule + amount analysis: use the Python tool to compute, from the extracted facts and the REAL vendor row, whether ALL THREE hold: (a) the invoice payee bank account is NOT in known_bank_accounts; (b) invoice amount > 2 * mean(historical_invoice_amounts); (c) (invoice_date - first_seen_date) < 30 days. If no vendor row was found, treat (a) and (c) as satisfied and the mean as unavailable. deterministic_hold = (a AND b AND c). Record which of a/b/c fired in rules_fired. Have the same Python call also return the invoice amount, the vendor historical mean, and their ratio for amount_analysis.",
+					"Step 3 - risk assessment: from the invoice text and the facts, assess fraud indicators (missing or mismatched PO, urgency / same-day-wire language, bank-change language, round-sum amounts, amount outlier vs the vendor's own history, tax math that does not add up, inconsistent or missing dates, near-threshold amounts). Produce risk_score 0-100 and risk_level one of low|medium|high|critical, with a flags array.",
+					"Step 4 - decision: queue_status = 'auto_hold' if deterministic_hold is true, or risk_level is critical with no vendor history; 'auto_cleared' if risk_level is low AND deterministic_hold is false AND both the vendor and the payee bank account are known; otherwise 'pending_review'.",
+					"Step 5 - verification status: 'not_required' when queue_status is 'auto_cleared'; otherwise 'pending' (an out-of-band vendor verification runs asynchronously and is attached to this case later).",
+					"Your ENTIRE reply is exactly one raw JSON object and nothing else: no report, no fraud-alert banner, no headings, no tables, no bullet points, no commentary, no code fences - before or after. The first character must be '{' and the last must be '}'. An optional top-level boolean \"unprocessable\" may be present (set by the Step 0 gate); omit it otherwise. Shape: { \"queue_status\": \"auto_cleared|pending_review|auto_hold\", \"invoice\": { \"invoice_number\": string, \"vendor_name\": string, \"amount\": string, \"currency\": string }, \"facts\": <the extracted+validated facts document, included verbatim>, \"amount_analysis\": { \"invoice_amount\": number, \"vendor_mean_amount\": number|null, \"ratio_vs_mean\": number|null, \"over_2x_mean\": boolean }, \"vendor\": { \"found\": boolean, \"vendor_id\": string|null, \"mean_amount\": number|null, \"bank_account_known\": boolean, \"amount_over_2x_mean\": boolean, \"days_since_first_seen\": number|null }, \"deterministic_hold\": boolean, \"rules_fired\": [string], \"risk\": { \"risk_score\": integer, \"risk_level\": \"low|medium|high|critical\", \"flags\": [ { \"type\": string, \"evidence\": string } ] }, \"verification\": { \"status\": \"not_required|pending\", \"result\": null }, \"summary\": string }."
+				],
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "question_invoice"
+				},
+				{
+					"lane": "documents",
+					"from": "answer_documents_facts"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1620,
+					"y": 300
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "agent_rocketride_1",
+			"provider": "agent_rocketride",
+			"config": {
+				"agent_description": "AP invoice triage controller: vendor-master lookup + deterministic fraud rules + risk assessment, emits the full approval-queue case record.",
+				"instructions": [
+					"Follow the instructions carried in the incoming question exactly, including its Step 0 processability gate.",
+					"FAST PATH (Step 0), check this before anything else: if no facts/context document is attached, or it is empty, or it has no non-empty vendor_name and no non-empty amount and no non-empty invoice_number, then do NOT enumerate or call any tool and do NOT narrate - your entire first-wave response must be exactly the 'unprocessable' JSON object specified in the question (starts with '{', ends with '}').",
+					"Otherwise you have a real Python code-execution tool. Do Step 1 (vendor lookup) yourself by reading the VENDOR_MASTER JSON array carried in the question - do NOT call a tool for it. Then use the Python tool for real for the Step 2 deterministic rule + amount computation: do NOT emit tool-call syntax as text, do NOT write 'simulated result', and do NOT fabricate the computation output. For a processable invoice, a run whose Step 2 numbers did not come from a genuine Python tool call is invalid.",
+					"Keep the real vendor row, the computed vendor mean, and the rule results in memory so the answer cites concrete values from actual tool output.",
+					"CRITICAL OUTPUT RULE: your entire final answer is exactly one raw JSON object and nothing else. Do NOT prepend a markdown report, a fraud-alert banner, headings, tables, or any prose. Do NOT wrap the JSON in code fences. Your response must start with '{', end with '}', and be valid parseable JSON - a single object, never an array, never text plus JSON."
+				],
+				"max_waves": 8,
+				"require_tool_call": false,
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "prompt_case"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1820,
+					"y": 300
+				},
+				"measured": {
+					"width": 150,
+					"height": 86
+				}
+			}
+		},
+		{
+			"id": "response_answers_pending",
+			"provider": "response_answers",
+			"config": {
+				"laneName": "pending_review"
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "agent_rocketride_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 2040,
+					"y": 300
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "llm_control",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": {
+					"apikey": "${ROCKETRIDE_ANTHROPIC_KEY}",
+					"extendedThinking": false
+				},
+				"parameters": {}
+			},
+			"control": [
+				{
+					"classType": "llm",
+					"from": "extract_facts_1"
+				},
+				{
+					"classType": "llm",
+					"from": "agent_rocketride_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 1820,
+					"y": 520
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "memory_internal_1",
+			"provider": "memory_internal",
+			"config": {
+				"type": "memory_internal"
+			},
+			"control": [
+				{
+					"classType": "memory",
+					"from": "agent_rocketride_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 2000,
+					"y": 520
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "tool_python_1",
+			"provider": "tool_python",
+			"config": {
+				"type": "tool_python",
+				"allowedModules": [],
+				"timeout": 30
+			},
+			"control": [
+				{
+					"classType": "tool",
+					"from": "agent_rocketride_1"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 2180,
+					"y": 520
+				},
+				"measured": {
+					"width": 150,
+					"height": 40
+				}
+			}
+		},
+		{
+			"id": "webhook_verify",
+			"provider": "webhook",
+			"config": {
+				"hideForm": true,
+				"mode": "Source",
+				"parameters": {},
+				"type": "webhook"
+			},
+			"ui": {
+				"position": {
+					"x": 20,
+					"y": 560
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "question_verify",
+			"provider": "question",
+			"config": {
+				"type": "question"
+			},
+			"input": [
+				{
+					"lane": "text",
+					"from": "webhook_verify"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 220,
+					"y": 560
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "prompt_verify",
+			"provider": "prompt",
+			"config": {
+				"instructions": [
+					"You simulate an out-of-band vendor verification call. PLACEHOLDER: this stands in for a future real telephony / voice integration (an outbound call or secure message to the vendor's on-file contact). Do not treat the simulated response as authoritative evidence.",
+					"The question text is a JSON case that needs verification: it carries the invoice fields, the risk flags, and rules_fired. Generate 2-3 targeted verification questions derived from the specific flags (e.g. confirm the remittance bank account, confirm the PO number, confirm the invoice total and date). Simulate a plausible scripted vendor response to each question as a back-and-forth call between 'sentinel' (you) and 'vendor'. Judge the result 'confirmed' (responses are internally consistent and match the invoice) or 'suspicious' (evasive, inconsistent, or contradicts the invoice).",
+					"The 'transcript' array is MANDATORY and must contain every turn of the simulated call in order, each as { \"speaker\": \"sentinel\"|\"vendor\", \"text\": string } - at minimum an opening sentinel line, one vendor reply per question, and a closing sentinel line. Never return an empty transcript. Put your reasoning/assessment in the 'notes' string, not in prose outside the object.",
+					"Your ENTIRE reply is exactly one raw JSON object and nothing else: no report, no 'FRAUD ALERT' banner, no executive summary, no headings, no tables, no bullet points, no markdown, no commentary, no code fences (no ```), before or after. The first character must be '{' and the last must be '}'. Shape: { \"invoice_number\": string, \"verification\": \"confirmed|suspicious\", \"questions\": [string], \"transcript\": [ { \"speaker\": \"sentinel|vendor\", \"text\": string } ], \"notes\": string, \"completed_at\": string }."
+				],
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "question_verify"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 420,
+					"y": 560
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "llm_verify",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": {
+					"apikey": "${ROCKETRIDE_ANTHROPIC_KEY}",
+					"extendedThinking": false
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "prompt_verify"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 620,
+					"y": 560
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "response_answers_verify",
+			"provider": "response_answers",
+			"config": {
+				"laneName": "verification_result"
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "llm_verify"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 820,
+					"y": 560
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "webhook_feedback",
+			"provider": "webhook",
+			"config": {
+				"hideForm": true,
+				"mode": "Source",
+				"parameters": {},
+				"type": "webhook"
+			},
+			"ui": {
+				"position": {
+					"x": 20,
+					"y": 700
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "question_feedback",
+			"provider": "question",
+			"config": {
+				"type": "question"
+			},
+			"input": [
+				{
+					"lane": "text",
+					"from": "webhook_feedback"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 220,
+					"y": 700
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "prompt_feedback",
+			"provider": "prompt",
+			"config": {
+				"instructions": [
+					"The question text is a JSON decision sent back by the Payment Fraud Sentinel UI after a human reviewed a case, or an async verification outcome. Expected fields: vendor_id, vendor_name, invoice_number, decision ('approve'|'reject'), event ('human_review'|'verification'), reviewer, note, decided_at (ISO date).",
+					"This build does not persist writeback to a database. Acknowledge the decision by echoing it back as a compact JSON object and nothing else: { \"feedback_ack\": true, \"persisted\": false, \"vendor_id\": <vendor_id or null>, \"vendor_name\": <vendor_name>, \"invoice_number\": <invoice_number>, \"decision\": <decision>, \"event\": <event>, \"recorded_at\": <decided_at>, \"note\": \"Writeback simulated - risk_history persistence is disabled in this demo build.\" }.",
+					"Output only that JSON object. First character '{', last character '}'. No prose, no code fences."
+				],
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "question_feedback"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 420,
+					"y": 700
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "llm_feedback",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": {
+					"apikey": "${ROCKETRIDE_ANTHROPIC_KEY}",
+					"extendedThinking": false
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "prompt_feedback"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 620,
+					"y": 700
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "response_answers_feedback",
+			"provider": "response_answers",
+			"config": {
+				"laneName": "feedback_ack"
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "llm_feedback"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 820,
+					"y": 700
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "webhook_chat",
+			"provider": "webhook",
+			"config": {
+				"hideForm": true,
+				"mode": "Source",
+				"parameters": {},
+				"type": "webhook"
+			},
+			"ui": {
+				"position": {
+					"x": 20,
+					"y": 840
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "question_chat",
+			"provider": "question",
+			"config": {
+				"type": "question"
+			},
+			"input": [
+				{
+					"lane": "text",
+					"from": "webhook_chat"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 220,
+					"y": 840
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "prompt_chat",
+			"provider": "prompt",
+			"config": {
+				"instructions": [
+					"You are the reviewer's assistant inside Payment Fraud Sentinel - a case-specific Q&A helper, not a general chatbot. The question text is a JSON object: { \"case\": <the full triage case record>, \"question\": string, \"history\": [ { \"role\": \"reviewer\"|\"assistant\", \"text\": string } ] }. 'history' is the earlier turns of this same conversation; use it for context.",
+					"Answer ONLY the reviewer's 'question', grounded strictly in the provided 'case' data: its extracted facts, vendor lookup (vendor.*), amount_analysis, risk (risk_score, risk_level, flags), deterministic_hold and rules_fired, summary, and verification.result when present. Do NOT use outside knowledge and do NOT invent vendor details, amounts, dates, bank accounts, or policy. If the case data does not contain what is asked, say so explicitly (for example: 'The case record doesn't include that.') rather than guessing.",
+					"Keep answers concise - 2 to 4 sentences - unless the question genuinely needs more. Reply in plain text: no JSON, no markdown headings, no preamble."
+				],
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "question_chat"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 420,
+					"y": 840
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "llm_chat",
+			"provider": "llm_anthropic",
+			"config": {
+				"profile": "claude-sonnet-4-6",
+				"claude-sonnet-4-6": {
+					"apikey": "${ROCKETRIDE_ANTHROPIC_KEY}",
+					"extendedThinking": false
+				},
+				"parameters": {}
+			},
+			"input": [
+				{
+					"lane": "questions",
+					"from": "prompt_chat"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 620,
+					"y": 840
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		},
+		{
+			"id": "response_answers_chat",
+			"provider": "response_answers",
+			"config": {
+				"laneName": "chat_answer"
+			},
+			"input": [
+				{
+					"lane": "answers",
+					"from": "llm_chat"
+				}
+			],
+			"ui": {
+				"position": {
+					"x": 820,
+					"y": 840
+				},
+				"measured": {
+					"width": 150,
+					"height": 66
+				}
+			}
+		}
+	],
+	"source": "webhook_invoice",
+	"project_id": "15ef2833-f171-4e27-85df-24e0d89aa266",
+	"viewport": {
+		"x": 0,
+		"y": 0,
+		"zoom": 1
+	},
+	"version": 1
+}

@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWS-2026-4002
+Vendor Name: Wide World Solutions Co
+Remit-To Bank Account: ACH-****7427
+Purchase Order Number: PO-61729
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Marketing campaign production and media placement
+Subtotal:            14,558.26 USD
+Sales Tax (8.5%):     1,237.45 USD
+Total Amount Due:    15,795.71 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

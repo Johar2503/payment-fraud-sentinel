@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: CPC-2026-4085
+Vendor Name: City Power Consulting Ltd
+Remit-To Bank Account: WIRE-****9878
+Purchase Order Number: PO-52047
+Invoice Date: 2026-08-16
+Due Date: 2026-09-15
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            15,910.05 USD
+Sales Tax (7.5%):     1,193.25 USD
+Total Amount Due:    17,103.31 USD
+Currency: USD
+
+Net 30. Please remit to the account on file. Banking details unchanged since last invoice.

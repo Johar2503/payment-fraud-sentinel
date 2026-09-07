@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: FCS-2026-4075
+Vendor Name: Fourth Coffee Systems Ltd
+Remit-To Bank Account: ACH-****3779
+Purchase Order Number: PO-74295
+Invoice Date: 2026-08-19
+Due Date: 2026-09-18
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            7,172.18 USD
+Sales Tax (8.0%):     573.77 USD
+Total Amount Due:    7,745.96 USD
+Currency: USD
+
+Our finance team has migrated banks. Kindly update your records to the remit-to account listed here.

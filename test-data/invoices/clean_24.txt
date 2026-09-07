@@ -1,0 +1,17 @@
+ACME MANUFACTURING CO. — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWT-2026-4024
+Vendor Name: Wide World Traders Ltd
+Remit-To Bank Account: IBAN-DE**53****8924
+Purchase Order Number: PO-66938
+Invoice Date: 2026-08-09
+Due Date: 2026-09-08
+
+Line Item: Professional services — Q3 implementation consulting
+Subtotal:            22,686.12 USD
+Sales Tax (8.0%):     1,814.89 USD
+Total Amount Due:    24,501.01 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

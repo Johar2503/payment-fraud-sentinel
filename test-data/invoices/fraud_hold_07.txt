@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: TSC-2026-4072
+Vendor Name: Tru-Fit Solutions Co
+Remit-To Bank Account: ACH-****3312
+Purchase Order Number: (not provided)
+Invoice Date: 2026-08-25
+Due Date: 2026-08-27
+
+Line Item: Emergency bulk procurement — expedited same-week delivery
+Subtotal:            99,011.34 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    99,011.34 USD
+Currency: USD
+
+URGENT: vendor requests same-day wire to the account listed above. Prior banking details on file are no longer valid — please update the remittance account immediately.

@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: WWS-2026-4070
+Vendor Name: Wide World Solutions Co
+Remit-To Bank Account: ACH-****4207
+Purchase Order Number: (not provided)
+Invoice Date: 2026-08-22
+Due Date: 2026-08-23
+
+Line Item: Emergency bulk procurement — expedited same-week delivery
+Subtotal:            181,144.73 USD
+Sales Tax:     0.00 USD
+Total Amount Due:    181,144.73 USD
+Currency: USD
+
+TIME SENSITIVE — expedited same-week delivery already dispatched. Wire full amount today to the new account above; do not use the old account.

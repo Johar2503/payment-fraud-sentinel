@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: PCG-2026-4064
+Vendor Name: Proseware Consulting GmbH
+Remit-To Bank Account: ACH-****4718
+Purchase Order Number: PO-82368
+Invoice Date: 2026-08-17
+Due Date: 2026-09-16
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            10,098.43 USD
+Sales Tax (7.0%):     706.89 USD
+Total Amount Due:    10,805.32 USD
+Currency: USD
+
+Terms Net 30. Standard remittance — no updates to payment instructions this cycle.

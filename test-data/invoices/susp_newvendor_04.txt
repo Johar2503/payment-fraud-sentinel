@@ -1,0 +1,17 @@
+CEDARWORKS FOODS INC — VENDOR PAYMENTS
+SUPPLIER INVOICE
+
+Invoice Number: NIL-2026-4087
+Vendor Name: Northwind Industries LLC
+Remit-To Bank Account: IBAN-DE**78****8611
+Purchase Order Number: PO-37516
+Invoice Date: 2026-08-26
+Due Date: 2026-09-25
+
+Line Item: Warehouse racking installation, phase 2
+Subtotal:            16,523.03 USD
+Sales Tax (7.5%):     1,239.23 USD
+Total Amount Due:    17,762.25 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.

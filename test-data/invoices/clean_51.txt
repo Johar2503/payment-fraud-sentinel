@@ -1,0 +1,17 @@
+HARBOR POINT LOGISTICS — ACCOUNTS PAYABLE
+SUPPLIER INVOICE
+
+Invoice Number: CLI-2026-4051
+Vendor Name: Coho Logistics Inc
+Remit-To Bank Account: WIRE-****4834
+Purchase Order Number: PO-34553
+Invoice Date: 2026-08-11
+Due Date: 2026-09-10
+
+Line Item: On-site equipment calibration and certification
+Subtotal:            43,765.34 USD
+Sales Tax (8.0%):     3,501.23 USD
+Total Amount Due:    47,266.57 USD
+Currency: USD
+
+Payment terms: Net 30. Remit per existing vendor banking on file. No changes to remittance details.
