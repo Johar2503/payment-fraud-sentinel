@@ -5,7 +5,16 @@
 **/.env.local
 api-key.txt
 **/api-key.txt
-.rocketride/
+
+# --- .rocketride/ is platform-provisioned; keep it out EXCEPT the two SDK
+#     tarballs package.json resolves, so a clean clone can `npm install`. ---
+.rocketride/*
+!.rocketride/client
+!.rocketride/shell
+.rocketride/client/*
+!.rocketride/client/rocketride.tgz
+.rocketride/shell/*
+!.rocketride/shell/shell.tgz
 
 # --- Machine-generated ---
 **/node_modules/
@@ -16,6 +25,7 @@ api-key.txt
 # working backups
 *.bak-*
 
-# stray key / credential text files
+# stray key / credential / scratch text files
 *[Kk]ey*.txt
+*[Uu]rl*.txt
 *.key
