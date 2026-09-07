@@ -15,3 +15,7 @@ api-key.txt
 
 # working backups
 *.bak-*
+
+# stray key / credential text files
+*[Kk]ey*.txt
+*.key
