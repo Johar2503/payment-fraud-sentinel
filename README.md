@@ -108,6 +108,28 @@ triage summary. See [BATCH_RESULTS.md](BATCH_RESULTS.md) for recorded numbers.
 
 ---
 
+## Where RocketRide does the work
+
+The hosted demo pages (`*.netlify.app` / the standalone Vite build) are **only
+the React UI**. Every invoice is processed by a **RocketRide pipeline running on
+RocketRide's cloud engine** — the front-end just starts the task and renders the
+result. Verify it:
+
+- **`pipelines/payment_fraud_sentinel_v2.pipe`** in this repo — a ~30-node
+  RocketRide pipeline (webhook sources, `extract_facts`, `schema_validate`,
+  `agent_rocketride` with `tool_python` + `memory_internal`, `response_answers`).
+  Not one model call — a multi-stage pipeline with a tool-calling agent.
+- **`src/lib/rrClient.tsx` / `src/lib/pipeline.ts`** — `new RocketRideClient()`,
+  `client.use(payment_fraud_sentinel_v2.pipe)`, `client.sendFiles()`,
+  `client.send()`. The app talks to `staging.rocketride.ai` over the RocketRide
+  SDK; there is no other backend.
+- **RocketRide App Builder deployment** —
+  `https://staging.rocketride.ai/?appid=payment_fraud_sentinel.paymentFraudSentinel`
+  runs the same pipeline *inside the RocketRide shell*, with nothing external at
+  all.
+- **`scripts/run_batch.mjs`** drives the same pipeline over the whole
+  `test-data/invoices/` set through RocketRide, concurrently.
+
 ## Architecture
 
 `payment_fraud_sentinel_v2.pipe` — webhook → `extract_facts` (LLM) →
