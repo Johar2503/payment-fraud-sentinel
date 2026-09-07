@@ -43,8 +43,10 @@ const App: React.FC = () => {
 	const store = useCaseStore();
 	const api = usePipeline();
 
-	// Real submitted cases take over as soon as any exist; otherwise the samples.
-	const usingSamples = store.cases.length === 0;
+	// Public demo: every visitor starts from the real queue, which begins empty
+	// (main.tsx clears any prior localStorage on a fresh open). The bundled
+	// MOCK_CASES preview is disabled so samples never look like prior activity.
+	const usingSamples = false;
 	const cases = usingSamples ? MOCK_CASES : store.cases;
 
 	const [selectedId, setSelectedId] = useState<string | null>(cases[0]?.id ?? null);
