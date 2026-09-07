@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # A full `npm ci` / build is intentionally not run here: both apps depend
+      # on the RocketRide `rocketride` / `shell` packages as local tarballs under
+      # the (git-ignored) .rocketride/ directory, which are not — and should not
+      # be — published. These checks cover what the repo can verify on its own.
+
+      - name: Pipeline definitions parse as JSON
+        run: |
+          fail=0
+          for f in pipelines/*.pipe; do
+            if node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f"; then
+              echo "ok   $f"
+            else
+              echo "BAD  $f"; fail=1
+            fi
+          done
+          exit $fail
+
+      - name: No secret literals committed
+        run: |
+          if git grep -nIE 'sk-ant-[A-Za-z0-9_-]{20}|rr_[a-f0-9]{24}|-{5}BEGIN [A-Z ]*PRIVATE KEY-{5}' -- . ':!.github/'; then
+            echo "::error::possible secret literal found in a tracked file"
+            exit 1
+          fi
+          echo "clean"
+
+      - name: Required top-level docs present
+        run: |
+          for f in README.md BATCH_RESULTS.md .env.example .gitignore; do
+            test -f "$f" && echo "ok   $f" || { echo "missing $f"; exit 1; }
+          done
