@@ -9,14 +9,17 @@ about any case. Built on RocketRide (idea #4, AP Payment Fraud Sentinel).
 
 ---
 
-## Just want to see it run?
+## Try it — no setup
 
-Open the deployed app — no setup:
+**Public demo: https://dist-her6va7v4-joharali2503-7334.vercel.app**
 
-**https://staging.rocketride.ai/?appid=payment_fraud_sentinel.paymentFraudSentinel**
+Open it, go to **Submit**, drop a file from `test-data/invoices/` (e.g.
+`clean_01.txt` clears, `fraud_hold_01.txt` auto-holds). Runs on a rate-limited
+Google Gemini free-tier key — no account, no cost. If it pauses, the daily free
+quota is spent; try again later.
 
-(RocketRide App Builder app. Sign in to RocketRide; access is via the Production
-team or the pending public listing.)
+Also deployed as a RocketRide App Builder app (runs on Anthropic, access-gated):
+`https://staging.rocketride.ai/?appid=payment_fraud_sentinel.paymentFraudSentinel`
 
 ---
 
