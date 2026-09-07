@@ -11,7 +11,7 @@ about any case. Built on RocketRide (idea #4, AP Payment Fraud Sentinel).
 
 ## Try it — no setup
 
-**Public demo: https://dist-her6va7v4-joharali2503-7334.vercel.app**
+**Public demo: https://dist-joharali2503-7334.vercel.app**
 
 Open it, go to **Submit**, drop a file from `test-data/invoices/` (e.g.
 `clean_01.txt` clears, `fraud_hold_01.txt` auto-holds). Runs on a rate-limited
