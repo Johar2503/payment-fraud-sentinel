@@ -16,15 +16,11 @@
 import React, { useCallback, useRef, useState } from 'react';
 import type { SubmitProgress } from '../lib/pipeline';
 import type { CaseRecord } from '../lib/types';
-import { COST, range } from './costEstimates';
+import { COST } from './costEstimates';
 import { friendlyError } from '../lib/friendlyError';
 import { AlertTriangle, FileText, X } from './icons';
 
 type Phase = 'idle' | 'staged' | 'running';
-
-// Soft warning threshold: if the LOW end of the staged batch estimate clears
-// this, flag it. Advisory only — it never blocks the confirm button.
-const BUDGET_WARN_USD = 2.0;
 
 export interface SubmitPanelProps {
 	/** whether the pipeline reported ready — used ONLY to guard the cost estimate
@@ -101,9 +97,6 @@ export const SubmitPanel: React.FC<SubmitPanelProps> = ({
 		}
 	}, [files, ready, submitInvoices, onCase, onSpend]);
 
-	const costText = range(files.length * COST.submitPerInvoiceLow, files.length * COST.submitPerInvoiceHigh);
-	const nearBudget = files.length * COST.submitPerInvoiceLow > BUDGET_WARN_USD;
-
 	return (
 		<div
 			onClick={canPick ? openPicker : undefined}
@@ -174,12 +167,6 @@ export const SubmitPanel: React.FC<SubmitPanelProps> = ({
 							{files.length} file{files.length === 1 ? '' : 's'} ready
 							<span className="ml-1 font-normal text-ink-dim">· {files.map((f) => f.name).join(', ')}</span>
 						</p>
-						{nearBudget && (
-							<p className="mt-0.5 flex items-center gap-1 text-[11px] font-medium" style={{ color: '#F5B942' }}>
-								<AlertTriangle size={11} className="shrink-0" />
-								This is close to or over your estimated remaining budget.
-							</p>
-						)}
 						{notReadyReason && (
 							<p className="mt-0.5 flex items-center gap-1 text-[11px] font-medium" style={{ color: '#F5B942' }}>
 								<AlertTriangle size={11} className="shrink-0" />
@@ -187,9 +174,6 @@ export const SubmitPanel: React.FC<SubmitPanelProps> = ({
 								below.
 							</p>
 						)}
-						<p className="mt-0.5 text-[11px] text-ink-faint">
-							Estimated model cost {costText} — rough estimate from live testing, not billing data.
-						</p>
 					</div>
 					<button
 						type="button"
@@ -201,7 +185,7 @@ export const SubmitPanel: React.FC<SubmitPanelProps> = ({
 						className="pfs-press inline-flex cursor-pointer items-center gap-1.5 rounded-md border bg-surface px-3 py-1.5 text-[12px] font-semibold disabled:cursor-not-allowed disabled:opacity-40"
 						style={{ borderColor: '#F59E0B', color: '#F59E0B' }}
 					>
-						Confirm submit — {costText}
+						Confirm submit
 					</button>
 					<button
 						type="button"

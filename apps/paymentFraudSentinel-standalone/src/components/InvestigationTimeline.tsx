@@ -188,7 +188,7 @@ export const InvestigationTimeline: React.FC<InvestigationTimelineProps> = ({
 											style={{ borderColor: '#F59E0B', color: '#F59E0B' }}
 										>
 											<Phone size={13} />
-											{verificationBusy ? 'Running…' : 'Confirm verification — ~$0.10–0.20'}
+											{verificationBusy ? 'Running…' : 'Confirm verification'}
 										</button>
 										{!verificationBusy && onVerificationCancel && (
 											<button

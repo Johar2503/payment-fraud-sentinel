@@ -92,12 +92,9 @@ const App: React.FC = () => {
 		detailRef.current?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
 	}, [selectedId]);
 
-	// ---- session spend estimate (rough, client-side, not billing) ----
-	const [estSpent, setEstSpent] = useState(0);
-	const [costHidden, setCostHidden] = useState(false);
-	const addSpend = useCallback((amount: number) => {
-		setEstSpent((s) => Math.round((s + amount) * 100) / 100);
-	}, []);
+	// Cost figures are internal — never surfaced in the public demo UI. This is a
+	// no-op kept only so the SubmitPanel / verification call sites still compile.
+	const addSpend = useCallback((_amount: number) => {}, []);
 
 	const [actionError, setActionError] = useState<string | null>(null);
 	const [errDetails, setErrDetails] = useState(false);
@@ -236,22 +233,6 @@ const App: React.FC = () => {
 							className="w-24 rounded border border-line bg-surface px-2 py-1 text-[11px] text-ink placeholder:text-ink-faint focus:border-ink-dim"
 						/>
 					</label>
-					{!costHidden && (
-						<span
-							className="inline-flex items-center gap-1.5 rounded border border-line bg-surface px-2 py-1 text-ink-faint"
-							title="Rough client-side estimate using midpoint per-call costs from live testing. Not real billing data."
-						>
-							~${estSpent.toFixed(2)} est. this session
-							<button
-								type="button"
-								onClick={() => setCostHidden(true)}
-								aria-label="Dismiss cost estimate"
-								className="cursor-pointer text-ink-faint hover:text-ink"
-							>
-								<X size={11} />
-							</button>
-						</span>
-					)}
 					<span className="inline-flex items-center gap-1.5 text-ink-dim">
 						<span style={{ color: isConnected && api.ready ? '#9AA7B8' : '#F5B942' }}>
 							<Dot size={12} />
